@@ -1,0 +1,64 @@
+// const host = "https://api.noroff.dev";
+// const endpoint = "/api/v1/gamehub/";
+// const apiUrl = host + endpoint;
+// const gameProducts =  document.querySelector(".game-container");
+
+// export async function getGames() {
+//     const response = await fetch(apiUrl);
+    
+//     const games = await response.json();
+//     console.log(games);
+//     return games;
+// }
+
+// export function renderGames(listOfGames) {
+//     // listOfGames.forEach(renderGames => { 
+    
+
+//         console.log(gameProducts);
+    
+//        listOfGames.innerHTML = "";
+    
+//         for (let i = 0; i < products.length; i++) {
+//         console.log(products[i].title);
+    
+//         listOfGames.innerHTML += `<h3>${products[i].title}</h3>`;
+
+
+//     // gameProducts += "<h3>" + game.title + "</h3>";
+//     // listOfGames.innerText = listOfGames.title;
+//     // document.body.append(renderGames);
+//     };
+// }
+
+// export function renderGame(gameData) {
+//     const gameElement = document.createElement("div");
+//         gameElement.innerText = gameData.title;
+//         document.body.append(gameElement);
+//     }
+
+
+// export async function gamesPage() {
+//     const games = await getGames();
+//     //renderGames(games);
+
+//     // console.log(games.title);
+//     // console.log(games[2]);
+//     // games.forEach(game => {
+//     //     console.log(game.title);
+//     //   });
+// }
+
+
+
+
+other
+
+
+    // resultsContainer.innerHTML = "";
+
+    // for (let i = 0; i < products.length; i++) {
+    //     console.log(products[i].all);
+
+    // resultsContainer.innerHTML += `<div class="result">${products[i].all}</div>`;
+    // }
