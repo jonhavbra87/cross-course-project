@@ -9,15 +9,15 @@ async function getProducts() {
 
     const results = await response.json();
     console.log(results);
-    //for loop
+    resultsContainer.innerHTML = "";
     //function (games) -> is a logic name for the "results".
     results.forEach(function (games) {
-        resultsContainer.innerHTML += `<a href="product.html?id=${games}" class="results">
+        resultsContainer.innerHTML += `<a href="product.html?id=${games.id}" class="results">
                                         <img class="product" src="${games.image}" alt="${games.title}"</img>
                                         <h3>${games.title}</h3>
                                         <p>${games.price}</p>
                                     </a>`
-    })
+    });
     } catch (error) {
         console.log(error);
         resultsContainer.innerHTML = message("error", error);
