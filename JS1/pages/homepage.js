@@ -16,7 +16,7 @@ export async function renderNews(){
           }
       }
 
-      //I use .splice() to remove two elemts out of the array.
+      //I use .splice() to remove two elemts out of the array. I only want to show three games.
       newGames.splice(1, 2);
       //console.log(newGames);
       renderGames(newGames);
