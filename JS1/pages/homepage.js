@@ -1,23 +1,54 @@
-const newReleases = document.querySelector(".new-products");
+import { getGames } from "../api/getProducts.js";
+import { renderGames } from "../render/products.js";
+
+const newsContainer = document.querySelector(".news-products");
 
 
-export function getNewReleases(titles) {
 
-    let newProduct = [];
+export async function renderNews(){
+    const games = await getGames();
     
-    console.log(newProduct);
+    const newGames = [];
 
-    for (let i = 0; i < title.length; i++) {
-      if (title[i].released >= 2007) {
-        newProduct.push(title[i]);
-        }
-    }
-    //Five is one too many, we need 4, so we remove the first one as this one repeats in the Trending now section.
-    // newReleases.shift();
-    return newProduct;
-  }
+    for (let i = 0; i < games.length; i++) {
+        if (games[i].released >= 2007) {
+          newGames.push(games[i]);
+          }
+      }
 
-getNewReleases(titles);
+      //I use .splice() to remove two elemts out of the array.
+      newGames.splice(1, 2);
+      //console.log(newGames);
+      renderGames(newGames);
+
+      return newGames;
+
+}
+
+
+renderNews()
+
+
+
+
+    // let newProducts = getGames;
+    // newsContainer.innerHTML = "";
+
+    // newProducts.forEach(function(games) {
+    //     newsContainer.innerHTML += `
+    //                                 <div class="p">
+    //                                 <h3>${games.released}</h3>
+    //                                 </div>
+    //                                 `;
+    // });
+//     console.log(newProduct);
+
+// export function getNewReleases(newProduct) {
+
+
+//   }
+
+// getNewReleases();
 
 
 
