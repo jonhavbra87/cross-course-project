@@ -1,14 +1,15 @@
-import { getGames } from "../api/getProducts.js";
-import { renderGames } from "../render/products.js";
+// import { getGames } from "../api/getProducts.js";
+// import { renderGames } from "../render/products.js";
 
-const newsContainer = document.querySelector(".news-products");
 
+    const newsContainer = document.querySelector(".results");
 
 
 export async function renderNews(){
-    const games = await getGames();
+    // const games = await getGames();
+
     
-    const newGames = [];
+    let newGames = [];
 
     for (let i = 0; i < games.length; i++) {
         if (games[i].released >= 2007) {
@@ -17,7 +18,7 @@ export async function renderNews(){
       }
 
       //I use .splice() to remove two elemts out of the array. I only want to show three games.
-      newGames.splice(1, 2);
+      newGames.splice(3);
       //console.log(newGames);
       renderGames(newGames);
 
