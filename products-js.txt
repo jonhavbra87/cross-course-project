@@ -1,0 +1,33 @@
+const resultsContainer = document.querySelector(".results");
+
+
+const host = "https://api.noroff.dev";
+const endpoint = "/api/v1/gamehub/";
+const apiUrl = host + endpoint;
+
+export async function getProducts() {
+   try {
+    const response = await fetch(apiUrl);
+
+    const results = await response.json();
+    console.log(results);
+
+    resultsContainer.innerHTML = "";
+    //function (games) -> is a logic name for the "results".
+    results.forEach(function (games) {
+        resultsContainer.innerHTML += `<a href="product.html?id=${games.id}" class="results">
+                                        <img class="product" src="${games.image}" alt="${games.title}"</img>
+                                        <h3>${games.title}</h3>
+                                        <p>${games.price}</p>
+                                    </a>`
+    });
+    } catch (error) {
+        console.log(error);
+        resultsContainer.innerHTML = message("error", error);
+    }
+};
+
+getProducts();
+
+//fetch -> getting the api
+//render -> showing on html
