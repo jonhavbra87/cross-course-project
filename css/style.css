@@ -75,6 +75,7 @@ main {
 .results,
 .results-about,
 .results-contact,
+.results-home,
 .new-products {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -87,6 +88,10 @@ main {
 
 .cover:hover {
   opacity: 0.7;
+}
+
+.card {
+  background-color: var(--secondary);
 }
 
 /* Footer design */
@@ -112,7 +117,7 @@ footer {
 /* Main headline */
 h1 {
   text-align: center;
-  text-shadow: 0.1px -14px 0px #872d7b;
+  text-shadow: 0.1px -3px 0px #242424;
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 40px;
@@ -174,6 +179,49 @@ p {
   background-color: #872d7b;
 
   justify-content: center;
+}
+
+.productsbutton {
+  border: 2px solid currentColor;
+  border-radius: 3rem;
+  color: #872d7b #393d59;
+  font-size: 2rem;
+  font-weight: 100;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: 0.2s;
+  transform: ease-in-out;
+  will-change: transform;
+
+  &::after {
+    background-color: #393939;
+    border-radius: 3rem;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top-left;
+    transition: 0.2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+  }
+
+  &:hover::after {
+    transform: translate(0, 0);
+  }
+
+  &:hover {
+    border: 2px solid transparent;
+    color: #872d7b;
+    transform: scale(1.05);
+    will-change: transform;
+  }
 }
 
 /* alert */

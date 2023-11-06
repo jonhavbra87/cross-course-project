@@ -1,33 +1,56 @@
+export async function homePage() {
+
+    const homeContainer = document.querySelector(".results-home");
+
+    // homeContainer.innerHTML = "";
+
+    homeContainer.innerHTML =   `
+<img src="/images/logo.png" alt="logo"></img>
+
+<button class="productsbutton" onclick="window.location.href ='./products/'">Visit our products</button>
+                                `;
+} 
+
+
+
+
+
+
+
+
+
+
+
 // import { getGames } from "../api/getProducts.js";
 // import { renderGames } from "../render/products.js";
 
 
-    const newsContainer = document.querySelector(".results");
+//     const newsContainer = document.querySelector(".results");
 
 
-export async function renderNews(){
-    // const games = await getGames();
+// export async function renderNews(){
+//     // const games = await getGames();
 
     
-    let newGames = [];
+//     let newGames = [];
 
-    for (let i = 0; i < games.length; i++) {
-        if (games[i].released >= 2007) {
-          newGames.push(games[i]);
-          }
-      }
+//     for (let i = 0; i < games.length; i++) {
+//         if (games[i].released >= 2007) {
+//           newGames.push(games[i]);
+//           }
+//       }
 
-      //I use .splice() to remove two elemts out of the array. I only want to show three games.
-      newGames.splice(3);
-      //console.log(newGames);
-      renderGames(newGames);
+//       //I use .splice() to remove two elemts out of the array. I only want to show three games.
+//       newGames.splice(3);
+//       //console.log(newGames);
+//       renderGames(newGames);
 
-      return newGames;
+//       return newGames;
 
-}
+// }
 
 
-renderNews()
+// renderNews()
 
 
 

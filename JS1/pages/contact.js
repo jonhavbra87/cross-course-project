@@ -29,12 +29,11 @@ export async function contactPage() {
         <p>We pride ourselves on providing exceptional customer service, so please don't hesitate to contact
           us if you have any questions or concerns. We're here to help you get the most out of your gaming experience!</p>
                                         `;
+} else {
+    console.error('aboutContainer not found in the HTML');
 }
-// } else {
-//     console.error('aboutContainer not found in the HTML');
 }
 
-contactPage();
 
 
 
