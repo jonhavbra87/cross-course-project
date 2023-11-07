@@ -1,11 +1,11 @@
 export async function contactPage() {
-    const contactContainer = document.querySelector(".results-contact");
+    const contactContainer = document.querySelector(".results");
 
     if (contactContainer) {
         contactContainer.innerHTML = `
         <img src="/images/call-senter.png" alt="Pcture of a headset with desktop lightning">
-        <p>If you have any questions, comments, or concerns about Game Hub or your order,  we're here to help! You can contact us using the contact form below.</p>
-        <form class="fieldset-container" action="form-success.php" method="GET">
+        <p class="infotext">If you have any questions, comments, or concerns about Game Hub or your order,  we're here to help! You can contact us using the contact form below.</p>
+        <form action="form-success.php" method="GET">
           <fieldset>
             <legend>Contact Form</legend>
             <label for="name">Your name</label>
@@ -14,19 +14,16 @@ export async function contactPage() {
             <input type="tel" name="phone" id="phone" class="form__input">
             <label for="email">Your email adress</label>
             <input type="text" name="email" id="email" class="form__input">
-            <p>Select your gender</p>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label>
-            <input type="radio" id="undisclosed" name="gender" value="undisclosed">
-            <label for="undisclosed">Undisclosed</label>
+            <p>Do you want us to give you a call?</p>
+            <div class="yesno"><input type="radio" id="answear-yes" name="call-option">
+            <label for="answear-yes">Yes</label>
+            <input type="radio" id="answear-no" name="call-option">
+            <label for="answear-no">No</label></div>
           </fieldset>
-          <input class="button" type="submit" value="Send">
+          <input class="input-button" type="submit" value="SEND">
         </form>
         <img src="/images/contac-person.png" alt="Person who sits in front of a laptop answears customer emails">
-        <p>Our customer support team is available to answer your emails 24/7. We typically respond to emails within 24 hours.</p>
-        <p>We pride ourselves on providing exceptional customer service, so please don't hesitate to contact
+        <p class="infotext">Our customer support team is available to answer your emails 24/7. We typically respond to emails within 24 hours. We pride ourselves on providing exceptional customer service, so please don't hesitate to contact
           us if you have any questions or concerns. We're here to help you get the most out of your gaming experience!</p>
                                         `;
 } else {

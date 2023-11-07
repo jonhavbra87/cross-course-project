@@ -1,6 +1,6 @@
 export async function homePage() {
 
-    const homeContainer = document.querySelector(".results-home");
+    const homeContainer = document.querySelector(".results");
 
     // homeContainer.innerHTML = "";
 

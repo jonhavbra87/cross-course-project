@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About page</title>
     <script src="/JS1/index.js" type="module"></script>
+    <script
+      src="https://kit.fontawesome.com/fe3b43ee88.js"
+      crossorigin="anonymous"
+    ></script>
     <link href="/css/style.css" rel="stylesheet" />
   </head>
   <body>
@@ -13,6 +17,18 @@
         <a href="/index.html"
           ><img src="/images/Logo.png" alt="logo of gamehub"
         /></a>
+        <label class="hidden-text" for="site-search">Search the site</label>
+        <input
+          type="search"
+          id="site-search"
+          name="q"
+          class="search"
+          placeholder="Search"
+        />
+        <input type="checkbox" id="menu-checkbox" />
+        <label for="menu-checkbox" class="hamburger-icon"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
         <nav>
           <a href="/index.html" class="current">Home</a>
           <a href="/products/">Products</a>
@@ -23,7 +39,25 @@
     </header>
     <main>
       <h1>About</h1>
-      <div class="results-about"></div>
+      <div class="results"></div>
+      <div class="tab-menu">
+        <a href="index.html" class="tab-item">
+          <i class="fas fa-home tab-icon"></i>
+          Home
+        </a>
+        <a href="news.html" class="tab-item">
+          <i class="fas fa-newspaper tab-icon"></i>
+          News
+        </a>
+        <a href="booking.html" class="tab-item">
+          <i class="fas fa-book tab-icon"></i>
+          Booking
+        </a>
+        <a href="visit.html" class="tab-item">
+          <i class="fas fa-location-dot"></i>
+          Visit
+        </a>
+      </div>
     </main>
     <footer></footer>
   </body>
