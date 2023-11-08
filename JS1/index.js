@@ -8,27 +8,6 @@ import { renderNews } from "./pages/news.js";
 // import { message } from "./message.js";
 
 
-console.log(location.pathname);
-
-// if (location.pathname === "/products/") {
-//     gamesPage()
-// }
-
-// if (location.pathname === "/product/") {
-//     gamePage()
-// }
-
-// if (location.pathname === "/about/") {
-//     aboutPage()
-// }
-
-// if (location.pathname === "/contact/") {
-//     contactPage()
-// }
-
-// if (location.pathname === "/index") {
-//     homePage()
-// }
 
 switch(location.pathname) {
     case "/products/":

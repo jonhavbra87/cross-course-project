@@ -4,8 +4,6 @@ export function renderGames(gameData) {
     const gameElement = document.createElement("a");
     gameElement.href = "/product/?id=" + gameData.id;
 
-
-
     const ImgElement = document.createElement("img");
     ImgElement.classList.add("cover");
     ImgElement.src = `${gameData.image}`;
@@ -20,8 +18,6 @@ export function renderGames(gameData) {
     gameElement.append(ImgElement, title, priceElement);
 
     mainElement.append(gameElement);
-
-    // document.title = gameData.title;
 }
 
 export function renderGames2(detailsOfGame) {

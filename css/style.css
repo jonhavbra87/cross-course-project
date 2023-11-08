@@ -200,6 +200,7 @@ fieldset {
   text-align: center;
   margin: 0 auto;
 }
+
 /* Loader */
 .loader {
   display: grid;

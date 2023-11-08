@@ -30,12 +30,3 @@ export async function contactPage() {
     console.error('aboutContainer not found in the HTML');
 }
 }
-
-
-
-
-
-//document.title =`${details.title}`
-
-
-//HUSK! ha med tittel på siden
