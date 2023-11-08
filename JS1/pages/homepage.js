@@ -1,6 +1,6 @@
 export async function homePage() {
 
-    const homeContainer = document.querySelector(".results");
+    const homeContainer = document.querySelector(".results-home");
 
     // homeContainer.innerHTML = "";
 
@@ -17,40 +17,6 @@ export async function homePage() {
 
 
 
-
-
-
-
-// import { getGames } from "../api/getProducts.js";
-// import { renderGames } from "../render/products.js";
-
-
-//     const newsContainer = document.querySelector(".results");
-
-
-// export async function renderNews(){
-//     // const games = await getGames();
-
-    
-//     let newGames = [];
-
-//     for (let i = 0; i < games.length; i++) {
-//         if (games[i].released >= 2007) {
-//           newGames.push(games[i]);
-//           }
-//       }
-
-//       //I use .splice() to remove two elemts out of the array. I only want to show three games.
-//       newGames.splice(3);
-//       //console.log(newGames);
-//       renderGames(newGames);
-
-//       return newGames;
-
-// }
-
-
-// renderNews()
 
 
 

@@ -25,5 +25,7 @@ export function renderGames(gameData) {
 }
 
 export function renderGames2(detailsOfGame) {
+    const mainElement = document.querySelector(".results");
+    mainElement.innerHTML = "";
     detailsOfGame.forEach(renderGames);
 }

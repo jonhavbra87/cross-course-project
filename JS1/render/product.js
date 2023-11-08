@@ -35,18 +35,15 @@ export function renderDetailedGame(gameData) {
     const ageRatingElement = document.createElement("p");
     ageRatingElement.textContent = `PEGI: ${gameData.ageRating}`;
 
-    // onSale
-    // ageRating
-    // discountedPrice
-
     gameElement.append(ImgElement, title, priceElement, descriptionElement, releasedElement, genreElement, ageRatingElement);
 
     mainElement.append(gameElement);
 
-    document.title = gameData.title;
+    document.title = `GameHub | ${gameData.title}`;
 }
 
 export function renderDetailsOfGame(listOfGames) {
-
+    const mainElement = document.querySelector(".details");
+    mainElement.innerHTML = "";
 renderDetailedGame(listOfGames);
 }

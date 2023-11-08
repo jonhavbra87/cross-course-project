@@ -1,5 +1,4 @@
 import { getGame } from "./../api/getProducts.js";
-// import { rederDetailsOfGame } from "./../render/product.js"
 import { renderDetailsOfGame } from "../render/product.js";
 
 export async function gamePage() {
@@ -11,8 +10,3 @@ export async function gamePage() {
         alert(error);
     }
 }
-
-
-// const id = url.searchParams.get("id"); url.params istedet=
-
-//bytte rendergamedetail!!!!!!!!!!!!!!!!!!!!!!!!!!

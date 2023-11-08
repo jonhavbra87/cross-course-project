@@ -3,6 +3,7 @@ import { gamesPage } from "./pages/products.js";
 import { aboutPage } from "./pages/about.js";
 import { contactPage } from "./pages/contact.js";
 import { homePage } from "./pages/homepage.js";
+import { renderNews } from "./pages/news.js";
 
 // import { message } from "./message.js";
 
@@ -42,7 +43,8 @@ switch(location.pathname) {
     case "/contact/":
         contactPage();
         break;
-    default:
+        default:
         homePage();
+        renderNews();
         break;
 }
