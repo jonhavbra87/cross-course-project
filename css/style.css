@@ -103,6 +103,9 @@ main {
   max-width: 800px;
   margin: 0 auto;
 }
+.details {
+  max-width: 200px;
+}
 
 .results-home,
 .newscontainer {

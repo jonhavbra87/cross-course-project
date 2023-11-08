@@ -1,7 +1,6 @@
 import { getGames } from "../api/getProducts.js";
 import { renderGames2 } from "../render/products.js";
 
-
 export async function gamesPage() {
 try {
     const games = await getGames();
@@ -11,5 +10,3 @@ try {
     
 }
 }
-
-

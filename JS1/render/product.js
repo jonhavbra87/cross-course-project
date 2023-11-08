@@ -17,23 +17,23 @@ export function renderDetailedGame(gameData) {
     let priceElement;
     if (gameData.onSale === true) {
     priceElement = document.createElement("p");
-    priceElement.textContent = `Special price: $ ${gameData.discountedPrice}`;
+    priceElement.innerHTML = `<i class="fa-solid fa-sack-dollar"></i> ${gameData.discountedPrice}`;
     } else {
     priceElement = document.createElement("p");
-    priceElement.textContent = `Price:  $ ${gameData.price}`;
+    priceElement.innerHTML = `<i class="fa-solid fa-sack-dollar"></i> ${gameData.price}`;
     }
 
     const descriptionElement = document.createElement("p");
-    descriptionElement.textContent = `Description: ${gameData.description}`;
+    descriptionElement.innerHTML = `<i class="fa-solid fa-comment-dots"></i> ${gameData.description}`;
 
     const releasedElement = document.createElement("p");
-    releasedElement.textContent = `Released: ${gameData.released}`;
+    releasedElement.innerHTML = `<i class="fa-regular fa-calendar"></i> ${gameData.released}`;
 
     const genreElement = document.createElement("p");
-    genreElement.textContent = `Genre: ${gameData.genre}`;
+    genreElement.innerHTML = `<i class="fa-regular fa-user"></i> ${gameData.genre}`;
 
     const ageRatingElement = document.createElement("p");
-    ageRatingElement.textContent = `PEGI: ${gameData.ageRating}`;
+    ageRatingElement.innerHTML = ` <i class="fa-solid fa-circle-info"></i>PEGI: ${gameData.ageRating}`;
 
     gameElement.append(ImgElement, title, priceElement, descriptionElement, releasedElement, genreElement, ageRatingElement);
 
