@@ -35,7 +35,11 @@ export function renderDetailedGame(gameData) {
     const ageRatingElement = document.createElement("p");
     ageRatingElement.innerHTML = ` <i class="fa-solid fa-circle-info"></i>PEGI: ${gameData.ageRating}`;
 
-    gameElement.append(ImgElement, title, priceElement, descriptionElement, releasedElement, genreElement, ageRatingElement);
+    const buttonElement = document.createElement("a");
+    buttonElement.innerHTML = `BUY NOW`;
+    buttonElement.href = "/checkout/?id=" + gameData.id;
+
+    gameElement.append(ImgElement, title, priceElement, descriptionElement, releasedElement, genreElement, ageRatingElement, buttonElement);
 
     mainElement.append(gameElement);
 
