@@ -1,5 +1,5 @@
 export async function contactPage() {
-    const contactContainer = document.querySelector(".results");
+    const contactContainer = document.querySelector(".text-container");
 
     if (contactContainer) {
         contactContainer.innerHTML = `

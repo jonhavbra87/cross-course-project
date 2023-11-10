@@ -1,5 +1,5 @@
 export async function aboutPage() {
-    const aboutContainer = document.querySelector(".results");
+    const aboutContainer = document.querySelector(".text-container");
 
     if (aboutContainer) {
         aboutContainer.innerHTML = `

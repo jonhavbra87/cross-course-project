@@ -13,14 +13,14 @@ export function renderDetailedGame(gameData) {
     const title = document.createElement("h3");
     title.textContent = gameData.title;
     
-    // Define either the priceElement. Checks if onSale is true or false.
+    // Define either the priceElement is onSale or not. Checks if onSale is true or false.
     let priceElement;
     if (gameData.onSale === true) {
     priceElement = document.createElement("p");
-    priceElement.innerHTML = `<i class="fa-solid fa-sack-dollar"></i> ${gameData.discountedPrice}`;
+    priceElement.innerHTML = `On sale: <i class="fa-solid fa-sack-dollar"></i> ${gameData.discountedPrice}`;
     } else {
     priceElement = document.createElement("p");
-    priceElement.innerHTML = `<i class="fa-solid fa-sack-dollar"></i> ${gameData.price}`;
+    priceElement.innerHTML = `Original: <i class="fa-solid fa-sack-dollar"></i> ${gameData.price}`;
     }
 
     const descriptionElement = document.createElement("p");
@@ -36,7 +36,7 @@ export function renderDetailedGame(gameData) {
     ageRatingElement.innerHTML = ` <i class="fa-solid fa-circle-info"></i>PEGI: ${gameData.ageRating}`;
 
     const buttonElement = document.createElement("a");
-    buttonElement.innerHTML = `BUY NOW`;
+    buttonElement.innerHTML = `<a class="input-button">BUY NOW</a>`;
     buttonElement.href = "/checkout/?id=" + gameData.id;
 
     gameElement.append(ImgElement, title, priceElement, descriptionElement, releasedElement, genreElement, ageRatingElement, buttonElement);

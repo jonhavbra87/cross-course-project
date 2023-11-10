@@ -1,10 +1,11 @@
 import { getGames } from "../api/getProducts.js";
 import { renderGames2 } from "../render/products.js";
 
-const newsContainer = document.querySelector(".results");
+const loader = document.querySelector(".loader");
 
 
 export async function renderNews(){
+    loader.innerHTML = "";
     const games = await getGames();
      
    
@@ -19,7 +20,7 @@ export async function renderNews(){
       newGames.pop();
       newGames.pop();
       renderGames2(newGames);
-
+     
       return newGames;
 
 }

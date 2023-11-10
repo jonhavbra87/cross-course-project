@@ -12,8 +12,15 @@ export function renderGames(gameData) {
     const title = document.createElement("h3");
     title.textContent = gameData.title;
 
-    const priceElement = document.createElement("p");
-    priceElement.textContent = `$ ${gameData.price}`;
+    let priceElement;
+    if (gameData.onSale === true) {
+    priceElement = document.createElement("p");
+    priceElement.innerHTML = `On sale: <i class="fa-solid fa-sack-dollar"></i> ${gameData.discountedPrice}`;
+
+    } else {
+    priceElement = document.createElement("p");
+    priceElement.innerHTML = `Original: <i class="fa-solid fa-sack-dollar"></i> ${gameData.price}`;
+    }
 
     gameElement.append(ImgElement, title, priceElement);
 
