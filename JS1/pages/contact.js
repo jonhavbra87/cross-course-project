@@ -27,6 +27,7 @@ export async function contactPage() {
           us if you have any questions or concerns. We're here to help you get the most out of your gaming experience!</p>
                                         `;
 } else {
-    console.error('aboutContainer not found in the HTML');
+  //This console error is for developers:
+    console.error('text-container not found in the HTML');
 }
 }

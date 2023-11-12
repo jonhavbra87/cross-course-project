@@ -12,7 +12,7 @@ export async function gamePage() {
     const game = await getGame(id);
     renderDetailsOfGame(game);
     } catch(error) {
-        /* alert(error);*/
+        //This console log is for developers:
         console.log("Unable to fetch api", error);
         errorMessage.innerHTML += displayError("Unable to fetch API", error);
     }

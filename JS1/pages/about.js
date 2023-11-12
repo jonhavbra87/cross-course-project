@@ -10,6 +10,7 @@ export async function aboutPage() {
 
                                         `;
 } else {
-    console.error('aboutContainer not found in the HTML');
+    //This console log is for developers:
+    console.error('text-container not found in the HTML');
 }
 }

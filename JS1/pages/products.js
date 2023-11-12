@@ -11,7 +11,8 @@ try {
     const games = await getGames();
     renderGames2(games);
 } catch (error) {
+    //This console log is for developers:
     console.log("Unable to fetch api", error);
-    errorMessage.innerHTML += displayError(error);
+    errorMessage.innerHTML += displayError("Unable to fetch API", error);
 }
 }

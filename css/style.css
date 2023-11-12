@@ -346,7 +346,7 @@ fieldset {
 .error {
   border: 1px solid var(--alert);
   padding: var(--padding);
-  color: var(--alert);
+  color: var(--light);
   background: var(--alertbackground);
 }
 /* PAYMENT */
