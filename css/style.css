@@ -6,6 +6,7 @@
   --third: #872d7b;
   --background: #2e3146;
   --alert: red;
+  --alertbackground: rgba(255, 0, 0, 0.1);
 }
 
 *,
@@ -341,23 +342,12 @@ fieldset {
   }
 }
 
-/* alert */
-.alert {
-  color: var(--alert);
-}
-
-.success {
-  border: 1px solid green;
-  padding: 1rem;
-  color: green;
-  background: rgba(0, 255, 0, 0.1);
-}
-
+/* Error handling */
 .error {
-  border: 1px solid var(--primary);
-  padding: 1rem;
-  color: var(--third);
-  background: var(--light);
+  border: 1px solid var(--alert);
+  padding: var(--padding);
+  color: var(--alert);
+  background: var(--alertbackground);
 }
 /* PAYMENT */
 .payment-container {

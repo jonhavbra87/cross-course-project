@@ -5,7 +5,6 @@ import { contactPage } from "./pages/contact.js";
 import { homePage } from "./pages/homepage.js";
 import { renderNews } from "./pages/news.js";
 
-// import { message } from "./message.js";
 
 
 
