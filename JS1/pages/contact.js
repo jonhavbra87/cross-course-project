@@ -3,7 +3,7 @@ export async function contactPage() {
 
     if (contactContainer) {
         contactContainer.innerHTML = `
-        <img src="/images/call-senter.png" alt="Pcture of a headset with desktop lightning">
+        <img src="/images/call-senter.jpg" alt="Pcture of a girl at a call center (J.J. Abrams style)">
         <p class="infotext">If you have any questions, comments, or concerns about Game Hub or your order,  we're here to help! You can contact us using the contact form below.</p>
         <form action="form-success.php" method="GET">
           <fieldset>
