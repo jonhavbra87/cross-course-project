@@ -4,7 +4,7 @@ import { aboutPage } from "./pages/about.js";
 import { contactPage } from "./pages/contact.js";
 import { homePage } from "./pages/homepage.js";
 import { renderNews } from "./pages/news.js";
-/* import { nameVerify, nameVerify } from "./forms.js"; */
+// import { updateamount } from "./forms.js";
 
 
 
@@ -18,10 +18,9 @@ switch(location.pathname) {
     case "/about/":
         aboutPage();
         break;
-/*     case "/checkout/":
-        Validate();
-        nameVerify();
-        break; */
+     case "/checkout/":
+        // updateamount();
+        break;
     case "/contact/":
         contactPage();
         break;

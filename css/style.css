@@ -242,7 +242,7 @@ footer a {
 
 /* Form */
 form {
-  max-width: 300px;
+  max-width: 600px;
   margin: 0 auto;
   padding: var(--padding);
   background-color: var(--background);
@@ -287,6 +287,33 @@ form div {
   outline: 0;
 }
 
+label.required {
+  content: "❉";
+  font-size: 0.8em;
+  text-align: baseline;
+  margin-left: 0.2em;
+}
+
+input:required {
+  border-left: 0.2em solid var(--third);
+  border-right: 0.2em solid var(--third);
+}
+
+input.dirty:not(:focus):valid {
+  background-color: #cfc;
+}
+
+input.dirty:not(:focus):invalid {
+  background-color: #fcc;
+}
+
+input.dirty:not(:focus):out-of-range {
+  border: 2px dashed #f00;
+}
+
+input.dirty:not(:focus):in-range {
+  border: 2px dashed #0f0;
+}
 .textInput {
   margin-top: 2px;
   height: 28px;
