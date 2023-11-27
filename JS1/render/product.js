@@ -5,6 +5,8 @@ export function renderDetailedGame(gameData) {
     const gameElement = document.createElement("a");
     gameElement.href = "/product/?id=" + gameData.id;
 
+    gameElement.dataset.id = gameData.id;
+
     const ImgElement = document.createElement("img");
     ImgElement.classList.add("cover");
     ImgElement.src = `${gameData.image}`;

@@ -3,8 +3,10 @@
   --primary: #000000;
   --light: #e1dfe5;
   --secondary: #e1dfe5;
-  --third: #b895e5;
+  --contrast: #89F07A;
   --background: #5b5971;
+  --complementaryBackgroundColor: #C5BC85;
+  --button: #7EBD5A;
   --alert: red;
   --alertbackground: rgba(255, 0, 0, 0.1);
 }
@@ -191,7 +193,7 @@ main {
 /* Main headline */
 h1 {
   text-align: center;
-  text-shadow: 2px var(--third);
+  text-shadow: 2px var(--contrast);
   text-transform: uppercase;
   font-weight: 900;
   font-size: 2em;
@@ -242,7 +244,7 @@ footer a {
 
 /* Form */
 form {
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 0 auto;
   padding: var(--padding);
   background-color: var(--background);
@@ -260,7 +262,7 @@ form button {
   margin-top: 1rem;
   width: 100%;
   color: var(--light);
-  background-color: var(--third);
+  background-color: var(--button);
   border: solid;
   border-radius: 4px;
 }
@@ -271,7 +273,12 @@ form div {
 
 .wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 70rem;
+  margin: 0 auto;
+  gap: 2em;
 }
 
 .wrapper input {
@@ -287,33 +294,12 @@ form div {
   outline: 0;
 }
 
-label.required {
-  content: "❉";
-  font-size: 0.8em;
-  text-align: baseline;
-  margin-left: 0.2em;
-}
-
 input:required {
-  border-left: 0.2em solid var(--third);
-  border-right: 0.2em solid var(--third);
+  border-left: 0.2em solid var(--contrast);
+  border-right: 0.2em solid var(--contrast);
 }
 
-input.dirty:not(:focus):valid {
-  background-color: #cfc;
-}
 
-input.dirty:not(:focus):invalid {
-  background-color: #fcc;
-}
-
-input.dirty:not(:focus):out-of-range {
-  border: 2px dashed #f00;
-}
-
-input.dirty:not(:focus):in-range {
-  border: 2px dashed #0f0;
-}
 .textInput {
   margin-top: 2px;
   height: 28px;
@@ -324,6 +310,11 @@ input.dirty:not(:focus):in-range {
 
 .val_error {
   color: var(--alert);
+}
+
+.vcard {
+  width: 80%;
+  margin: 0 auto;
 }
 /* fieldset {
   display: flex;
@@ -343,7 +334,7 @@ label img {
   justify-self: center;
   align-self: center;
   border: 16px solid var(--light);
-  border-top: 16px solid var(--third);
+  border-top: 16px solid var(--contrast);
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -375,7 +366,7 @@ label img {
   padding: 0.5rem 2rem 0.5rem 2rem;
   margin: 1rem auto;
   color: var(--primary);
-  background-color: var(--third);
+  background-color: var(--button);
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -389,7 +380,7 @@ label img {
 
 .productsbutton {
   display: block;
-  background-color: var(--third);
+  background-color: var(--button);
   border: 2px solid currentColor;
   border-radius: 2rem;
   color: var(--primary);

@@ -30,66 +30,6 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
     </style>
-    <script>
-      window.addEventListener("load", (e) => {
-        let quantfield = document.getElementById("quantity");
-        let quotefield = document.getElementById("quote");
-
-        updateamount(
-          quantfield.valueAsNumber * parseFloat(quotefield.textContent)
-        );
-
-        quantfield.addEventListener("input", (e) => {
-          updateamount(
-            quantfield.valueAsNumber * parseFloat(quotefield.textContent)
-          );
-        });
-
-        decorateRequiredLabels();
-        addDirtyListeners();
-      });
-
-      function updateamount(val) {
-        let amtfield = document.getElementById("amount");
-        total = val.toLocaleString(navigator.language, {
-          style: "currency",
-          currency: "USD",
-        });
-        // display the total in the output
-        amtfield.value = total;
-      }
-
-      function decorateRequiredLabels() {
-        let labels = document.getElementsByTagName("label");
-        for (let label of labels) {
-          let labelfor = label.getAttribute("for");
-          if (labelfor) {
-            let field = document.getElementById(labelfor);
-            if (field) {
-              if (field.hasAttribute("required")) {
-                label.classList.add("required");
-              }
-            }
-          }
-        }
-      }
-      function addDirtyListeners() {
-        theform = document.getElementById("theform");
-        let inputs = theform.getElementsByTagName("input");
-        for (var i = 0; i < inputs.length; i++) {
-          var input = inputs[i];
-          input.addEventListener("input", dirtyInput);
-          input.addEventListener("blur", dirtyInput);
-        }
-      }
-
-      function dirtyInput(evt) {
-        elem = evt.srcElement;
-        if ((elem.nodeName = "INPUT")) {
-          elem.classList.add("dirty");
-        }
-      }
-    </script>
   </head>
   <body>
     <header>
@@ -118,119 +58,160 @@
       </div>
     </header>
     <main>
-      <fieldset class="wrapper" id="wrapper">
-        <form action="" autocomplete="off" id="theform">
-          <div>
-            <label for="firstname"
-              >First Name:
-              <input
-                required
-                type="text"
-                name="firstname"
-                id="firstname"
-                class="textInput"
-                placeholder="First name"
-                minlength="1"
-                maxlength="50"
-                pattern="^[a-zA-Z]{1,50}$"
-                title="Enter upper or lower case letters"
-              />
-            </label>
-          </div>
+      <div class="wrapper" id="wrapper">
+        <div class="result">gameproductid</div>
+        <div>
+          <form action="" autocomplete="off" id="theform">
+            <div>
+              <label for="firstname"
+                >First Name:
+                <input
+                  required
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  class="textInput"
+                  placeholder="First name"
+                  minlength="1"
+                  maxlength="50"
+                  pattern="^[a-zA-Z]{1,50}$"
+                  title="Enter upper or lower case letters"
+                />
+              </label>
+            </div>
+  
+            <div>
+              <label for="surname"
+                >Lastname:
+                <input
+                  type="text"
+                  name="surname"
+                  id="surname"
+                  class="textInput"
+                  placeholder="Surname"
+                  required
+                  maxlength="50"
+                  pattern="^[a-åA-Å]{1,50}$"
+                  title="Enter upper or lower case letters"
+                />
+              </label>
+            </div>
+  
+            <div>
+              <label for="phone"
+                >Phone Number:
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  class="textInput"
+                  placeholder="Phone number"
+                  required
+                  pattern="[0-9]{8}"
+                  required
+                  title="8 digits phone number"
+                />
+              </label>
+            </div>
+  
+            <div>
+              <label for="confmail"
+                >E-mail:
+                <input
+                  type="email"
+                  name="confmail"
+                  id="confmail"
+                  class="textInput"
+                  placeholder="your@email.com"
+                  required
+              /></label>
+            </div>
+  
+            <div>
+              <label for="address"
+                >Address:
+                <input
+                  type="text"
+                  name="address"
+                  id="address"
+                  class="textInput"
+                  placeholder="Address"
+              /></label>
+            </div>
+  
+            <div>
+              <label for="zip"
+                >Zip Code:
+                <input
+                  type="text"
+                  name="zip"
+                  id="zipcode"
+                  class="textInput"
+                  placeholder="0123"
+                  pattern="^\d{4}"
+                  title="4 digits zip code"
+                />
+              </label>
+            </div>
+            <div>
+              <label for="city"
+                >City:
+                <input
+                  type="text"
+                  name="city"
+                  id="city"
+                  class="textInput"
+                  placeholder="City"
+                  pattern="^[a-zA-Z]"
+                  title="Enter upper or lower case letters"
+                />
+              </label>
+            </div>
+       
+          </form>
+        </div>
+        <div>    <form action="" autocomplete="off" id="theform">
+          <div class="vcard"><img
+           src="../images/vcard.png"
+           alt="picture of a fake visacard"
+         /></div>
+         <div>
+         <label for="cardnumber">Card Number
+         <input
+           type="number"
+           placeholder="xxxx xxxx xxxx xxxx"
+           name="cardnumber"
+           id="cardnumber"
+           class="textInput"
+           required
+         /></label>
+         </div>
+        <div><label for="date">MM / YY
+         <input
+           type="number"
+           placeholder="MM/YY"
+           name="date"
+           id="date"
+           class="textInput"
+           required
+         /></label>
+       </div>
+         <div><label for="cvc">CVC
+         <input
+           type="number"
+           placeholder="CVC"
+           name="cvc"
+           id="cvc"
+           class="textInput"
+           required
+         /></label>
+       </div>
+            <!-- <a href="/checkoutcomplete/" class="input-button" id="input-button"
+           >PURCHASE</a
+         > -->
+         <button type="submit">Checkout</button>
+       </form></div>
 
-          <div>
-            <label for="surname"
-              >Surname:
-              <input
-                type="text"
-                name="surname"
-                id="surname"
-                class="textInput"
-                placeholder="Surname"
-                required
-                maxlength="50"
-                pattern="^[a-åA-Å]{1,50}$"
-                title="Enter upper or lower case letters"
-              />
-            </label>
-          </div>
-
-          <div>
-            <label for="phone"
-              >Phone Number:
-              <input
-                type="tel"
-                name="phone"
-                id="phone"
-                class="textInput"
-                placeholder="Phone number"
-                required
-                pattern="[0-9]{8}"
-                required
-                title="8 digits phone number"
-              />
-            </label>
-          </div>
-
-          <div>
-            <label for="confmail"
-              >E-mail:
-              <input
-                type="email"
-                name="confmail"
-                id="confmail"
-                class="textInput"
-                placeholder="youre@email.com"
-                required
-            /></label>
-          </div>
-
-          <div>
-            <label for="address"
-              >Address:
-              <input
-                type="text"
-                name="address"
-                id="address"
-                class="textInput"
-                placeholder="Address"
-            /></label>
-          </div>
-
-          <div>
-            <label for="zip"
-              >Zip Code:
-              <input
-                type="text"
-                name="zip"
-                id="zipcode"
-                class="textInput"
-                placeholder="0123"
-                pattern="^\d{4}"
-                title="4 digits zip code"
-              />
-            </label>
-          </div>
-          <div>
-            <label for="town"
-              >Town:
-              <input
-                type="text"
-                name="town"
-                id="town"
-                class="textInput"
-                placeholder="Town"
-                pattern="^[a-zA-Z]"
-                title="Enter upper or lower case letters"
-              />
-            </label>
-          </div>
-          <!-- <a href="/checkoutcomplete/" class="input-button" id="input-button"
-            >PURCHASE</a
-          > -->
-          <button type="submit">Checkout</button>
-        </form>
-      </fieldset>
     </main>
   </body>
 </html>
