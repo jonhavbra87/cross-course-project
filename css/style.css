@@ -243,18 +243,14 @@ footer a {
 }
 
 /* Form */
-form {
-  /* max-width: 600px; */
-  margin: 0 auto;
+.form-container {
+  max-width: 265px;
+  /* margin: 0 auto; */
   padding: var(--padding);
   background-color: var(--background);
   color: var(--light);
   border-radius: 4px;
   font-size: 1rem;
-}
-
-form h1 {
-  color: var(--primary);
 }
 
 form button {
@@ -263,7 +259,7 @@ form button {
   width: 100%;
   color: var(--light);
   background-color: var(--button);
-  border: solid;
+  border: solid var(--primary);
   border-radius: 4px;
 }
 
@@ -335,10 +331,15 @@ input:required {
   margin: 0 auto;
 } */
 
-label img {
-  max-width: 10%;
-  min-width: 5%;
+/* Checkout picture */
+.checkout {
+  max-width: 265px;
 }
+
+.checkout p {
+  text-align: center;
+}
+
 /* Loader */
 .loader {
   display: grid;

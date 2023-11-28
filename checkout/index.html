@@ -60,10 +60,12 @@
     <main>
       <h1>checkout</h1>
       <div class="wrapper">
-        <div class="result">gameproductid</div>
-        <div>
-          <form action="" autocomplete="off" id="theform">
-            <div>
+        <div class="buygame">gameproductid
+          <div class="loader"></div>
+        </div>
+        <div class="form-container">
+          <form  action="" autocomplete="off" id="theform">
+            <div >
               <label for="firstname"
                 >First Name:
                 <input
@@ -167,10 +169,9 @@
                 />
               </label>
             </div>
-       
-          </form>
         </div>
-        <div>    <form action="" autocomplete="off" id="theform">
+        <div class="form-container">    
+
           <div class="vcard"><img
            src="../images/vcard.png"
            alt="picture of a fake visacard"
@@ -195,7 +196,7 @@
            name="expirationDate"
            id="expirationDate"
            class="textInput"
-           min="2023-11"
+           min="11-2023"
            required
          /></label>
        </div>
@@ -213,9 +214,9 @@
             <!-- <a href="/checkoutcomplete/" class="input-button" id="input-button"
            >PURCHASE</a
          > -->
-         <button type="submit">Checkout</button>
-       </form></div>
-
+         <button class="input-button" type="submit">Checkout</button>
+       </form>
+      </div>
     </main>
   </body>
 </html>

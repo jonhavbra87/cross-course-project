@@ -3,13 +3,10 @@ import { gamesPage } from "./pages/products.js";
 // import { oldGamesPage } from "./pages/oldProducts.js";
 import { aboutPage } from "./pages/about.js";
 import { homePage } from "./pages/homepage.js";
+import { buyGame } from "./pages/buygame.js";
 import { renderNews } from "./pages/news.js";
 import { validateForm } from "./forms.js";
-import { setMinDateForExpiration } from "./checkout/creditcard.js";
 // import * `./cart.js`;
-
-
-
 
 
 switch(location.pathname) {
@@ -26,8 +23,7 @@ switch(location.pathname) {
         aboutPage();
         break;
      case "/checkout/":
-        setMinDateForExpiration()
-        // updateamount();
+        buyGame();
         break;
     // case "/cart/"
     //     break;
