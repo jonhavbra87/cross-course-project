@@ -141,8 +141,9 @@ main {
   width: 100%;
   height: auto;
 }
+
 /* .card {
-  background-color: var(--primary);
+  background-color: var(--complementaryBackgroundColor);
   color: var(--primary);
 } */
 
@@ -450,7 +451,7 @@ input:required {
   text-align: center;
 }
 
-@media screen and (min-width: 40rem) and (max-width: 50rem) {
+/* @media screen and (min-width: 40rem) and (max-width: 50rem) {
   .results,
   .display,
   .text-container,
@@ -459,7 +460,7 @@ input:required {
     flex-wrap: wrap;
     flex-direction: row;
   }
-}
+} */
 
 @media (max-width: 40rem) {
   /* Header design */

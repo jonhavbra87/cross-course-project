@@ -1,5 +1,6 @@
 export function renderGames(gameData) {
     const mainElement = document.querySelector(".results");
+    
 
     const gameElement = document.createElement("a");
     gameElement.href = "/product/?id=" + gameData.id;

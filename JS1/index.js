@@ -1,6 +1,5 @@
 import { gamePage } from "./pages/product.js";
 import { gamesPage } from "./pages/products.js";
-// import { oldGamesPage } from "./pages/oldProducts.js";
 import { aboutPage } from "./pages/about.js";
 import { homePage } from "./pages/homepage.js";
 import { buyGame } from "./pages/buygame.js";
@@ -16,9 +15,6 @@ switch(location.pathname) {
     case "/product/":
         gamePage();
         break;
-    // case "/oldProducts/":
-    //     getOldGames();
-    //     break;
     case "/about/":
         aboutPage();
         break;
