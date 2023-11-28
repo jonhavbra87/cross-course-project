@@ -1,4 +1,3 @@
-// const form = document.querySelector("#contactForm");
 const firstName = document.querySelector("#firstName");
 const firstNameError = document.querySelector("#firstNameError");
 const lastName = document.querySelector("#lastName");
@@ -24,6 +23,13 @@ export function validateForm(event) {
         console.log("last name works");
     } else {
         lastNameError.style.display = "block";
+    }
+
+    if (checkLength(phone.value, 7) === true) {
+        phoneError.style.display = "none";
+        console.log("phone number works");
+    } else {
+        phoneError.style.display = "block";
     }
     
     if (validateEmail(email.value) === true) {

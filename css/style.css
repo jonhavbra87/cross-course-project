@@ -466,22 +466,23 @@ input:required {
   header {
     display: flex;
     justify-content: center;
-    position: sticky;
+    position: fixed;
     align-items: center;
-    top: 0;
+    bottom: 0;
     z-index: 999999999999999999;
     gap: 0;
   }
   .header-container {
     gap: 0.3rem;
+    justify-content: space-around;
   }
   .search {
-    display: block;
-    background: var(--light);
+    display: none;
+    /* background: var(--light);
     border-radius: 20px;
     padding: 6px;
     width: 50%;
-    color: var(--primary);
+    color: var(--primary); */
   }
 
   .shoppingcart,
@@ -505,8 +506,8 @@ input:required {
   nav {
     background: var(--primary);
     position: absolute;
-    top: 0px;
-    margin-top: 60px;
+    bottom: 100px;
+    left: 0px;
     color: var(--light);
   }
   nav a:hover {
