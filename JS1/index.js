@@ -5,6 +5,7 @@ import { aboutPage } from "./pages/about.js";
 import { homePage } from "./pages/homepage.js";
 import { renderNews } from "./pages/news.js";
 import { validateForm } from "./forms.js";
+import { setMinDateForExpiration } from "./checkout/creditcard.js";
 // import * `./cart.js`;
 
 
@@ -25,6 +26,7 @@ switch(location.pathname) {
         aboutPage();
         break;
      case "/checkout/":
+        setMinDateForExpiration()
         // updateamount();
         break;
     // case "/cart/"
