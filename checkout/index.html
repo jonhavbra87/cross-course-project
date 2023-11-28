@@ -58,7 +58,8 @@
       </div>
     </header>
     <main>
-      <div class="wrapper" id="wrapper">
+      <h1>checkout</h1>
+      <div class="wrapper">
         <div class="result">gameproductid</div>
         <div>
           <form action="" autocomplete="off" id="theform">
@@ -106,7 +107,6 @@
                   id="phone"
                   class="textInput"
                   placeholder="Phone number"
-                  required
                   pattern="[0-9]{8}"
                   required
                   title="8 digits phone number"
@@ -178,21 +178,24 @@
          <div>
          <label for="cardnumber">Card Number
          <input
-           type="number"
+           type="text"
            placeholder="xxxx xxxx xxxx xxxx"
            name="cardnumber"
            id="cardnumber"
            class="textInput"
+           pattern="[0-9]{20}"
+           title="Enter your credicard number (20 digits)"
            required
          /></label>
          </div>
-        <div><label for="date">MM / YY
+        <div><label for="expirationDate">MM / YY
          <input
-           type="number"
+           type="month"
            placeholder="MM/YY"
-           name="date"
-           id="date"
+           name="expirationDate"
+           id="expirationDate"
            class="textInput"
+           min="2023-11"
            required
          /></label>
        </div>
@@ -203,6 +206,7 @@
            name="cvc"
            id="cvc"
            class="textInput"
+           pattern="^\d{3}"
            required
          /></label>
        </div>

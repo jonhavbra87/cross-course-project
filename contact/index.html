@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="About page is the origin story of Game Hub"
-    />
-    <meta
-      name="keywords"
-      content="console games, playstation, xbox, nintendo, PC"
-    />
-    <meta
-      name="description"
       content="Contact page is where the costumer can contact Game Hub for questions and refunds"
     />
     <meta
@@ -74,7 +66,61 @@
     </header>
     <main>
       <h1>contact</h1>
-      <div class="text-container"><div class="loader"></div></div>
+      <div class="text-container">
+        <img
+          src="/images/call-senter.jpg"
+          alt="Pcture of a girl at a call center (J.J. Abrams style)"
+        />
+        <p class="infotext">
+          If you have any questions, comments, or concerns about Game Hub or
+          your order, we're here to help! You can contact us using the contact
+          form below.
+        </p>
+        <form class="wrapper contact" id="contactForm">
+          <div>
+            <label>
+              First name (required)
+              <input name="firstName" id="firstName" />
+            </label>
+            <div class="form-error" id="firstNameError">
+              Please enter your first name
+            </div>
+          </div>
+
+          <div>
+            <label>
+              Last name (minimum 4 characters)
+              <input name="lastName" id="lastName" />
+            </label>
+            <div class="form-error" id="lastNameError">
+              Your last name must be at least 4 characters
+            </div>
+          </div>
+
+          <div>
+            <label>
+              Email (required)
+              <input name="email" id="email" />
+            </label>
+            <div class="form-error" id="emailError">
+              Please enter a valid email address
+            </div>
+          </div>
+
+          <button>Submit</button>
+        </form>
+        <img
+          src="/images/contact-person.png"
+          alt="Person who sits in front of a laptop answears customer emails"
+        />
+        <p class="infotext">
+          Our customer support team is available to answer your emails 24/7. We
+          typically respond to emails within 24 hours. We pride ourselves on
+          providing exceptional customer service, so please don't hesitate to
+          contact us if you have any questions or concerns. We're here to help
+          you get the most out of your gaming experience!
+        </p>
+      </div>
     </main>
     <footer>
       <div class="footer-container">

@@ -1,61 +1,51 @@
-window.addEventListener("load", e => {
-    // Get references to the form elements
-    let quantfield = document.getElementById("firstname");
-    let quotefield = document.getElementById("surname");
-    let theform = document.getElementById("theform");
-    let btnsubmit = document.getElementById("input-button");
-  
+// const form = document.querySelector("#contactForm");
+const firstName = document.querySelector("#firstName");
+const firstNameError = document.querySelector("#firstNameError");
+const lastName = document.querySelector("#lastName");
+const lastNameError = document.querySelector("#lastNameError");
+const email = document.querySelector("#email");
+const emailError = document.querySelector("#emailError");
+const phone = document.querySelector("#phone");
 
-    // Define custom validation messages for each form element
-    let validitychecks = {
-        "firstname": "Enter upper or lower case letters",
-        "zip": "This field must be a valid NOR ZIP Code",
-        "confmail": "This field must be a valid email address"
-    };
 
-    updateamount(quantfield.valueAsNumber * parseFloat(quotefield.textContent));
 
-    quantfield.addEventListener("input", e => {
-        updateamount(quantfield.valueAsNumber * parseFloat(quotefield.textContent));
-    });
+export function validateForm(event) {
+    event.preventDefault();
 
-    btnreset.addEventListener("click", evt => {
-        theform.reset();
-        evt.preventDefault();
-    })
-
-    // TODO: Given a form field, run a custom check to see if the content is valid
-    // and set the custom message if it is not
-    function checkFieldValid(field) {
-        // remove any old custom error message that was there before
-        field.setCustomValidity("");
-
-        let isvalid = field.checkValidity();
-
-        if (!isvalid)
-            field.setCustomValidity(validitychecks[field.id]);
+    if (checkLength(firstName.value, 0) === true) {
+        firstNameError.style.display = "none";
+        console.log("first name works");
+    } else {
+        firstNameError.style.display = "block";
     }
 
-    // Check the validity of each form element
-    function runFieldChecks() {
-        ["ticker", "confmail", "zip"].forEach(elem => {
-            let field = document.getElementById(elem);
-            checkFieldValid(field);
-        });
+    if (checkLength(lastName.value, 3) === true) {
+        lastNameError.style.display = "none";
+        console.log("last name works");
+    } else {
+        lastNameError.style.display = "block";
+    }
+    
+    if (validateEmail(email.value) === true) {
+        emailError.style.display = "none";
+        console.log("email works");
+    } else {
+        emailError.style.display = "block";
     }
 
-    // Check all the fields in the form when the user clicks Submit
-    btnsubmit.addEventListener("click", evt => {
-        if (theform.checkValidity() === false) {
-            runFieldChecks();
-        }
-    });
+    
+}
 
-    // TODO: set up change listeners to validate each element 
-    // when the value changes
-    ["ticker", "confmail", "zip"].forEach(elem => {
-        document.getElementById(elem).addEventListener("change", evt => {
-            checkFieldValid(evt.srcElement);
-        });
-    });
-});
+function checkLength(value, len) {
+    if (value.trim().length > len) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function validateEmail(email) {
+    const regEx = /\S+@\S+\.\S+/;
+    const patternMatches = regEx.test(email);
+    return patternMatches;
+}
