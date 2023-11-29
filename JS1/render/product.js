@@ -7,6 +7,9 @@ export function renderDetailedGame(gameData) {
 
     gameElement.dataset.id = gameData.id;
 
+    const headline = document.createElement("h1");
+    headline.textContent = gameData.title;
+
     const ImgElement = document.createElement("img");
     ImgElement.classList.add("cover");
     ImgElement.src = `${gameData.image}`;
@@ -41,7 +44,7 @@ export function renderDetailedGame(gameData) {
     buttonElement.innerHTML = `<a class="input-button">BUY NOW</a>`;
     buttonElement.href = "/checkout/?id=" + gameData.id;
 
-    gameElement.append(ImgElement, title, priceElement, descriptionElement, releasedElement, genreElement, ageRatingElement, buttonElement);
+    gameElement.append(headline, ImgElement, title, priceElement, descriptionElement, releasedElement, genreElement, ageRatingElement, buttonElement);
 
     mainElement.append(gameElement);
 

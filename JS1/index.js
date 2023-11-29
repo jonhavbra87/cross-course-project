@@ -25,8 +25,7 @@ switch(location.pathname) {
     //     break;
     case "/contact/":
         const form = document.querySelector("#contactForm");
-        form.addEventListener("submit", formValidator);    
-        // Since I change the eventListener to index.js, I don't need to call validateForm() here    
+        form.addEventListener("submit", formValidator);
         break;
     case "/index.html":
         homePage();

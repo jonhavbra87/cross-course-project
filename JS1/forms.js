@@ -9,7 +9,6 @@ const phone = document.querySelector("#phone");
 function firstNameValidator() {
     if (checkLength(firstName.value, 0) === true) {
       firstNameError.style.display = "none";
-      console.log("first name works");
       return true;
     } else {
       firstNameError.style.display = "block";
@@ -20,7 +19,6 @@ function firstNameValidator() {
   function lastNameValidator() {
     if (checkLength(lastName.value, 0) === true) {
       lastNameError.style.display = "none";
-      console.log("first name works");
       return true;
     } else {
       lastNameError.style.display = "block";
@@ -31,7 +29,6 @@ function firstNameValidator() {
   function phoneNumberValidator() {
     if (checkLength(phone.value, 7) === true) {
       phoneError.style.display = "none";
-      console.log("phone number works");
       return true;
     } else {
       phoneError.style.display = "block";
@@ -42,7 +39,6 @@ function firstNameValidator() {
   function emailValidator() {
     if (validateEmail(email.value) === true) {
       emailError.style.display = "none";
-      console.log("email works");
       return true;
     } else {
       emailError.style.display = "block";
@@ -50,27 +46,27 @@ function firstNameValidator() {
     }
   }
   
-  export function formValidator(event) {
-    if (
-      !firstNameValidator() ||
-      !lastNameValidator() ||
-      !phoneNumberValidator() ||
-      !emailValidator()
-    ) {
-      event.preventDefault();
+  // export function formValidator(event) {
+  //   if (
+  //     !firstNameValidator() ||
+  //     !lastNameValidator() ||
+  //     !phoneNumberValidator() ||
+  //     !emailValidator()
+  //   ) {
+  //     event.preventDefault();
+  //   }
+  // }
+
+export function formValidator(event) {
+    const firstName = firstNameValidator(); 
+    const lastName = lastNameValidator(); 
+    const phoneNumber = phoneNumberValidator(); 
+    const email = emailValidator(); 
+
+    if (!firstName || !lastName || !phoneNumber || !email){
+        event.preventDefault(); 
     }
-  }
-
-// export function formValidator(event) {
-//     const firstName = firstNameValidator(); 
-//     const lastName = lastNameValidator(); 
-//     const phoneNumber = phoneNumberValidator(); 
-//     const email = emailValidator(); 
-
-//     if (!firstName || !lastName || !phoneNumber || !email){
-//         event.preventDefault(); 
-//     }
-// }
+}
 
 
   function checkLength(value, len) {
