@@ -1,13 +1,13 @@
 :root {
   --padding: 1rem;
   --primary: #000000;
-  --light: #e1dfe5;
+  --light: #fff;
   --secondary: #e1dfe5;
   --contrast: #89f07a;
   --background: #5b5971;
   --complementaryBackgroundColor: #c5bc85;
   --button: #7ebd5a;
-  --alert: red;
+  --alert: #a30300;
   --alertbackground: rgba(255, 0, 0, 0.1);
 }
 
@@ -271,8 +271,11 @@ form div {
 .form-error {
   display: none;
   color: var(--alert);
-  font-size: 0.7rem;
-  margin-top: 2px;
+  background-color: var(--secondary);
+  font-size: 0.8rem;
+  margin-top: 3px;
+  padding: 0.2rem;
+  border-radius: 5px;
 }
 
 .wrapper {

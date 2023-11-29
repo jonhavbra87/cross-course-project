@@ -179,3 +179,18 @@ export function nameVerify(){
         firstname.innerHTML ="";
     }
 } */
+
+
+Logic from Jonas (chatGPT):
+// Array of input field IDs
+const inputIds = ["phone", "firstName", "lastName", "email"];
+
+// Add event listener for each input field
+inputIds.forEach(function(id) {
+    var inputField = document.getElementById(id);
+
+    inputField.addEventListener("input", function(event) {
+        event.preventDefault();
+        // Your additional logic for the input field with the current ID
+    });
+});
