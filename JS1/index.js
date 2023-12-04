@@ -28,11 +28,11 @@ switch(location.pathname) {
         form.addEventListener("submit", formValidator);
         break;
     case "/index.html":
+    case "/":
         homePage();
         renderNews();
-        default:
-
         break;
+    default:
 }
 
 
