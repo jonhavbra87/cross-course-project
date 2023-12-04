@@ -64,7 +64,10 @@
           <div class="loader"></div>
         </div>
         <div class="form-container">
-          <form  action="" autocomplete="off" id="theform">
+          <form  
+          method="GET" 
+          action="/checkoutComplete/index.html"
+          id="theform">
             <div >
               <label for="firstname"
                 >First Name:
@@ -211,10 +214,7 @@
            required
          /></label>
        </div>
-            <!-- <a href="/checkoutcomplete/" class="input-button" id="input-button"
-           >PURCHASE</a
-         > -->
-         <button class="input-button" type="submit">Checkout</button>
+       <input type="submit" class="input-button" value="Submit" />
        </form>
       </div>
     </main>
