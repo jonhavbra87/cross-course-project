@@ -7,7 +7,7 @@ const emailError = document.querySelector("#emailError");
 const phone = document.querySelector("#phone");
 
 function firstNameValidator() {
-    if (checkLength(firstName.value, 0) === true) {
+    if (checkLength(firstName.value, 1) === true) {
       firstNameError.style.display = "none";
       return true;
     } else {
@@ -17,7 +17,7 @@ function firstNameValidator() {
   }
   
   function lastNameValidator() {
-    if (checkLength(lastName.value, 0) === true) {
+    if (checkLength(lastName.value, 3) === true) {
       lastNameError.style.display = "none";
       return true;
     } else {
