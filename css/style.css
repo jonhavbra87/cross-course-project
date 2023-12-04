@@ -82,17 +82,25 @@ header {
   padding: 1em 0;
   width: 20rem;
   color: var(--primary);
+  text-indent: 10px;
 }
 .hidden-text {
   display: none;
   padding-left: var(--padding);
 }
 
+.fa-cart-shopping,
+.fa-magnifying-glass,
 .hamburger-icon,
 #menu-checkbox {
   display: none;
 }
+.dark-theme-select {
+}
 
+.dark-theme-text {
+  font-size: 0.8em;
+}
 nav {
   display: flex;
   flex-direction: row;
@@ -381,7 +389,10 @@ input:required {
 /* img {
   margin: 0 auto;
 } */
-
+.logoonpage {
+  margin: 0 auto;
+  max-width: 50%;
+}
 /* Game designs */
 
 /* Button */
@@ -494,6 +505,8 @@ input:required {
     gap: 0.3rem;
     justify-content: space-around;
   }
+
+  .dark-theme-select,
   .search {
     display: none;
     /* background: var(--light);
@@ -503,12 +516,17 @@ input:required {
     color: var(--primary); */
   }
 
-  .shoppingcart,
+  .fa-cart-shopping,
+  .fa-magnifying-glass,
   .hamburger-icon {
     transform: scale(1.8);
     display: block;
     align-items: right;
     color: var(--light);
+  }
+
+  text {
+    display: none;
   }
 
   nav,
