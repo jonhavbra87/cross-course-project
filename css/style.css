@@ -194,6 +194,10 @@ footer {
   color: var(--light);
 }
 
+.gamebackground {
+  width: 100%;
+  background-color: var(--background);
+}
 main {
   color: var(--primary);
 }
@@ -276,7 +280,7 @@ footer a {
   font-size: 1rem;
 }
 
-form i-button {
+/* form i-button {
   padding: var(--padding);
   margin-top: 1rem;
   width: 100%;
@@ -285,7 +289,7 @@ form i-button {
   border: solid var(--primary);
   border-radius: 4px;
   cursor: pointer;
-}
+} */
 
 form div {
   margin: 3px auto;
