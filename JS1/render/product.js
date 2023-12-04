@@ -8,6 +8,7 @@ export function renderDetailedGame(gameData) {
     gameElement.dataset.id = gameData.id;
 
     const headline = document.createElement("h1");
+    headline.classList.add("product");
     headline.textContent = gameData.title;
 
     const ImgElement = document.createElement("img");
