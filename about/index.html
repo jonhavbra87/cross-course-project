@@ -36,18 +36,25 @@
         <a href="/index.html"
           ><img src="/images/Logo.png" alt="logo of gamehub"
         /></a>
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <a href="/checkout/index.html"
+        <div class="icons mobile">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <a href="/login/index.html" class="icons mobile"
+          ><i class="fa-solid fa-user"></i
+        ></a>
+        <a href="/checkout/index.html" class="icons mobile"
           ><i class="fa-solid fa-cart-shopping"></i
         ></a>
+        <div class="icons mobile"><i class="fa-solid fa-toggle-off"></i></div>
         <input type="checkbox" id="menu-checkbox" />
         <label for="menu-checkbox" class="hamburger-icon"
           ><i class="fa-solid fa-bars"></i
         ></label>
         <nav>
-          <a href="/index.html">Home</a>
+          <a href="/index.html" class="current">Home</a>
           <a href="/products/">Products</a>
-          <a href="/about/" class="current">About</a>
+          <a href="/about/">About</a>
           <a href="/contact/">Contact</a>
         </nav>
         <label class="hidden-text" for="site-search">Search the site</label>
@@ -58,9 +65,15 @@
           class="search"
           placeholder="Search"
         />
-        <div class="dark-theme-select">
-          <i class="fa-solid fa-toggle-off"></i
-          ><span class="dark-theme-text">Dark theme</span>
+        <div class="icons desktop">
+          <a href="/login/index.html"><i class="fa-solid fa-user"></i></a>
+          <a href="/checkout/index.html"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></a>
+          <div class="dark-theme-select">
+            <i class="fa-solid fa-toggle-off"></i
+            ><span class="dark-theme-text">Dark theme</span>
+          </div>
         </div>
       </div>
     </header>

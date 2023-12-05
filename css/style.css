@@ -41,13 +41,9 @@ header {
   grid-row: 1;
   grid-column: 1 / -1;
   background-color: var(--primary);
-  /* color: var(--light); */
   height: 100px;
   width: 100%;
   position: static;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .header-container {
@@ -63,6 +59,9 @@ header {
   color: var(--light);
 }
 
+.header-container a {
+  color: var(--light);
+}
 .current {
   text-decoration: underline;
 }
@@ -82,35 +81,37 @@ header {
 
 .hidden-text {
   display: none;
-  padding-left: var(--padding);
 }
 
-.fa-cart-shopping,
-.fa-magnifying-glass,
 .hamburger-icon,
 #menu-checkbox {
   display: none;
-}
-
-.login a {
-  color: var(--light);
 }
 
 .dark-theme-text {
   font-size: 0.8em;
 }
 
+.icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: var(--padding);
+}
+
+.icons.mobile {
+  display: none;
+}
 nav {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: var(--padding);
 }
 
 nav a {
   text-decoration: solid;
   text-align: center;
   font-size: 1.2rem;
-  color: var(--light);
 }
 
 nav a:hover {
@@ -147,7 +148,8 @@ main img {
 }
 
 .wrapper,
-.text-container {
+.text-container,
+.login-container {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
   gap: 2rem;
   align-items: center;
@@ -331,6 +333,7 @@ footer a {
 }
 
 /* Form */
+.login-container,
 .form-container {
   max-width: 544px;
   width: 100%;
@@ -341,6 +344,10 @@ footer a {
   border-color: var(--primary);
   border-style: solid;
   border-radius: 15px;
+}
+
+.login-container {
+  max-width: 300px;
 }
 
 form div {
@@ -578,6 +585,12 @@ thead {
   text-align: center;
 }
 
+@media screen and (min-width: 673px) and (max-width: 832px) {
+  .dark-theme-text {
+    display: none;
+  }
+}
+
 @media (max-width: 42rem) {
   /* Header design */
   header {
@@ -594,18 +607,31 @@ thead {
     justify-content: space-around;
   }
 
-  .dark-theme-select,
+  .dark-theme-text,
   .search {
     display: none;
   }
 
+  .fa-toggle-off,
+  .fa-user,
   .fa-cart-shopping,
   .fa-magnifying-glass,
   .hamburger-icon {
-    transform: scale(1.8);
+    transform: scale(1.5);
     display: block;
     align-items: right;
     color: var(--light);
+  }
+
+  .icons.mobile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: auto;
+  }
+
+  .icons.desktop {
+    display: none;
   }
 
   text {
