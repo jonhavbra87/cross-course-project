@@ -1,15 +1,17 @@
 :root {
   --padding: 1rem;
   --primary: #000000;
-  --light: #fff;
   --secondary: #e0dfe5;
+  --thirdly: #5b5971;
+  --light: #fff;
   --contrast: #214531;
-  /* --background: #5b5971; */
   --background: #1b203d;
   --complementaryBackgroundColor: #c5bc85;
   --button: #7ebd5a;
   --alert: #8a0000;
   --alertbackground: rgba(255, 0, 0, 0.1);
+  --productsbutton: #872d7b;
+  --productsbuttonhover: #df9fd7;
 }
 
 *,
@@ -77,6 +79,7 @@ header {
   color: var(--primary);
   text-indent: 10px;
 }
+
 .hidden-text {
   display: none;
   padding-left: var(--padding);
@@ -88,12 +91,15 @@ header {
 #menu-checkbox {
   display: none;
 }
-.dark-theme-select {
+
+.login a {
+  color: var(--light);
 }
 
 .dark-theme-text {
   font-size: 0.8em;
 }
+
 nav {
   display: flex;
   flex-direction: row;
@@ -105,6 +111,10 @@ nav a {
   text-align: center;
   font-size: 1.2rem;
   color: var(--light);
+}
+
+nav a:hover {
+  opacity: 0.7;
 }
 
 main {
@@ -124,6 +134,7 @@ main img {
 /* HTML rendering */
 .results,
 .details,
+.wrapper,
 .text-container {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -135,6 +146,7 @@ main img {
   margin: 0 auto;
 }
 
+.wrapper,
 .text-container {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
   gap: 2rem;
@@ -244,7 +256,18 @@ h1 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
+h1 {
+  animation: fadeIn 1s ease-in-out;
+}
 /* News headline */
 h2 {
   font-weight: bold;
@@ -306,7 +329,7 @@ footer a {
 
 /* Form */
 .form-container {
-  max-width: 380px;
+  max-width: 544px;
   width: 100%;
   margin: 0 auto;
   padding: var(--padding);
@@ -314,22 +337,43 @@ footer a {
   color: var(--primary);
   border-color: var(--primary);
   border-style: solid;
-  border-radius: 10px;
-  font-size: 1rem;
+  border-radius: 15px;
 }
 
 form div {
-  margin: 3px auto;
+  margin: 3px 2rem;
 }
 
+input,
 textarea {
-  margin: 3px auto;
+  border: solid;
+  border-radius: 5px;
+  display: block;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: var(--padding);
+  width: 100%;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.03);
+    will-change: transform;
+  }
+}
+
+input:required {
+  border-left: 0.3em solid var(--contrast);
+  border-right: 0.3em solid var(--contrast);
+}
+
+/* textarea {
   border: 2px solid;
   border-radius: 5px;
   cursor: pointer;
   resize: vertical;
-}
+} */
 
+input:focus,
 textarea:focus {
   border-color: var(--button);
   outline: none;
@@ -344,7 +388,7 @@ textarea:focus {
   padding: 0.2rem;
   border-radius: 5px;
 }
-
+/* 
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -357,35 +401,15 @@ textarea:focus {
 
 .wrapper.contact {
   flex-direction: column;
-}
+} */
 
-.wrapper input {
-  border: 2px solid var(--primary);
-  border-radius: 4px;
-  display: block;
-  font-size: 1rem;
-  padding: var(--padding);
-  width: 100%;
-  cursor: pointer;
-}
-
-.wrapper input:focus {
-  outline: 1;
-  outline-color: var(--contrast);
-}
-
-input:required {
-  border-left: 0.3em solid var(--contrast);
-  border-right: 0.3em solid var(--contrast);
-}
-
-.textInput {
+/* .textInput {
   margin-top: 2px;
   height: 28px;
   border: 1px var(--primary);
   padding: var(--padding);
   width: 100%;
-}
+} */
 
 .val_error {
   color: var(--alert);
@@ -396,13 +420,41 @@ input:required {
   margin: 0 auto;
 }
 
-/* Checkout picture */
-.checkout {
-  max-width: 265px;
+/* Checkout page */
+.form-container.checkout,
+.buygame {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.buygame p {
+  border: solid;
+  border-radius: 10px;
+  padding: var(--padding);
+  background-color: var(--productsbutton);
+  color: var(--light);
+  font-weight: 200;
+  font-size: larger;
+  text-transform: uppercase;
+}
+table {
+  margin: 0 auto;
+  border: 3px solid;
+  border-radius: 5px;
+  width: 92%;
+  text-align: left;
+}
+
+th {
+  text-align: center;
+}
+
+thead {
+  background-color: var(--primary);
+  color: var(--light);
 }
 
 .checkout p {
-  text-align: center;
+  /* text-align: center; */
 }
 
 /* Loader */
@@ -416,6 +468,7 @@ input:required {
   width: 60px;
   height: 60px;
   animation: spin 2s linear infinite;
+  margin: 0 auto;
 }
 
 @keyframes spin {
@@ -444,7 +497,7 @@ input:required {
   border-radius: 10px;
   border: solid currentColor;
   border-color: var(--primary);
-  padding: 0.5rem 2rem 0.5rem 2rem;
+  padding: 0.5rem 2rem;
   margin: 1rem auto;
   color: var(--primary);
   background-color: var(--button);
@@ -462,26 +515,27 @@ input:required {
 
 .productsbutton {
   display: block;
-  background-color: var(--button);
+  background-color: var(--productsbutton);
   border: 2px solid currentColor;
   border-radius: 2rem;
-  color: var(--primary);
+  color: var(--light);
   cursor: pointer;
   font-size: 1.5rem;
   font-weight: 400;
   overflow: hidden;
-  padding: 2rem;
+  padding: 1rem 2rem;
   position: relative;
   text-decoration: none;
   text-align: center;
-  transition: 0.2s;
+  transition: 0.1s;
   transform: ease-in-out;
   max-width: auto;
   max-height: 100%;
   margin: var(--padding);
 
   &::after {
-    background-color: var(--light);
+    background-color: var(--primary);
+
     border-radius: 2rem;
     content: "";
     display: block;
@@ -490,9 +544,8 @@ input:required {
     position: absolute;
     left: 0;
     top: 0;
-    transform: translate(-100%, 0) rotate(0deg);
-    transform-origin: top-left;
-    transition: 0.3s transform ease-out;
+    transform: translate(-100%, 0) rotate(180deg);
+    transition: 0.2s transform ease-out;
     will-change: transform;
     z-index: -1;
   }
@@ -503,7 +556,8 @@ input:required {
 
   &:hover {
     border: 2px solid transparent;
-    color: var(--primary);
+    color: var(--productsbuttonhover);
+    border-color: var(--productsbuttonhover);
     transform: scale(1.05);
     will-change: transform;
   }
@@ -521,14 +575,7 @@ input:required {
   text-align: center;
 }
 
-@media screen and (min-width: 40rem) and (max-width: 50rem) {
-  .form-container,
-  .infotext.contact {
-    max-width: 500px;
-  }
-}
-
-@media (max-width: 40rem) {
+@media (max-width: 42rem) {
   /* Header design */
   header {
     display: flex;
@@ -595,9 +642,11 @@ input:required {
     margin-bottom: 10rem;
   }
 
+  .form-container,
   .infotext.contact {
-    max-width: 380px;
+    width: 95%;
   }
+
   .home-content,
   .text-container {
     display: flex;

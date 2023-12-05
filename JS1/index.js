@@ -18,15 +18,16 @@ switch(location.pathname) {
     case "/about/":
         aboutPage();
         break;
-     case "/checkout/":
-        buyGame();
-        break;
+
     // case "/cart/"
     //     break;
     case "/contact/":
         const form = document.querySelector("#contactForm");
         form.addEventListener("submit", formValidator);
         break;
+    case "/checkout/":
+            buyGame();
+            break;
     case "/index.html":
     case "/":
         homePage();

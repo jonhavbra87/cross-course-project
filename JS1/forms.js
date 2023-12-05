@@ -27,7 +27,7 @@ function firstNameValidator() {
   }
   
   function phoneNumberValidator() {
-    if (checkLength(phone.value, 7) === true) {
+    if (checkLength(phone.value.trim(), 7) === true) {
       phoneError.style.display = "none";
       return true;
     } else {
@@ -46,6 +46,7 @@ function firstNameValidator() {
     }
   }
   
+  //Function that makes the user get a error one at a time:
   // export function formValidator(event) {
   //   if (
   //     !firstNameValidator() ||
@@ -78,11 +79,18 @@ export function formValidator(event) {
 }
 
 function validateEmail(email) {
-    const regEx = /\S+@\S+\.\S+/;
+    const regEx = /^\S+@\S+.\S+$/;
     const patternMatches = regEx.test(email);
     console.log(typeof patternMatches);
     return patternMatches;
 }
+
+const inputs = document.querySelectorAll(".contact input");
+inputs.forEach(input => {
+  input.addEventListener("change", formValidator)
+  input.addEventListener("blur", formValidator)
+})
+
 
 // export function validateForm(event) {
 //     event.preventDefault();

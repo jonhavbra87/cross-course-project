@@ -22,7 +22,7 @@
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
     <link href="/css/style.css" rel="stylesheet" />
-    <script src="/JS1/index.js" defer type="module"></script>
+    <script src="/JS1/index.js" type="module"></script>
     <script
       src="https://kit.fontawesome.com/fe3b43ee88.js"
       crossorigin="anonymous"
@@ -38,7 +38,9 @@
           ><img src="/images/Logo.png" alt="logo of gamehub"
         /></a>
         <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-solid fa-cart-shopping"></i>
+        <a href="/checkout/index.html"
+          ><i class="fa-solid fa-cart-shopping"></i
+        ></a>
         <input type="checkbox" id="menu-checkbox" />
         <label for="menu-checkbox" class="hamburger-icon"
           ><i class="fa-solid fa-bars"></i
@@ -66,121 +68,11 @@
     <main>
       <h1>checkout</h1>
       <div class="wrapper">
-        <div class="buygame">gameproductid
+        <div class="buygame"><p>Please put a item in your cart <i class="fa-solid fa-cart-arrow-down"></i></p>
           <div class="loader"></div>
         </div>
-        <div class="form-container">
-          <form  
-          method="GET" 
-          action="/checkoutComplete/index.html"
-          id="theform">
-            <div >
-              <label for="firstname"
-                >First Name:
-                <input
-                  required
-                  type="text"
-                  name="firstname"
-                  id="firstname"
-                  class="textInput"
-                  placeholder="First name"
-                  minlength="1"
-                  maxlength="50"
-                  pattern="^[a-zA-Z]{1,50}$"
-                  title="Enter upper or lower case letters"
-                />
-              </label>
-            </div>
-  
-            <div>
-              <label for="surname"
-                >Lastname:
-                <input
-                  type="text"
-                  name="surname"
-                  id="surname"
-                  class="textInput"
-                  placeholder="Surname"
-                  required
-                  maxlength="50"
-                  pattern="^[a-åA-Å]{1,50}$"
-                  title="Enter upper or lower case letters"
-                />
-              </label>
-            </div>
-  
-            <div>
-              <label for="phone"
-                >Phone Number:
-                <input
-                  type="tel"
-                  name="phone"
-                  id="phone"
-                  class="textInput"
-                  placeholder="Phone number"
-                  pattern="[0-9]{8}"
-                  required
-                  title="8 digits phone number"
-                />
-              </label>
-            </div>
-  
-            <div>
-              <label for="confmail"
-                >E-mail:
-                <input
-                  type="email"
-                  name="confmail"
-                  id="confmail"
-                  class="textInput"
-                  placeholder="your@email.com"
-                  required
-              /></label>
-            </div>
-  
-            <div>
-              <label for="address"
-                >Address:
-                <input
-                  type="text"
-                  name="address"
-                  id="address"
-                  class="textInput"
-                  placeholder="Address"
-              /></label>
-            </div>
-  
-            <div>
-              <label for="zip"
-                >Zip Code:
-                <input
-                  type="text"
-                  name="zip"
-                  id="zipcode"
-                  class="textInput"
-                  placeholder="0123"
-                  pattern="^\d{4}"
-                  title="4 digits zip code"
-                />
-              </label>
-            </div>
-            <div>
-              <label for="city"
-                >City:
-                <input
-                  type="text"
-                  name="city"
-                  id="city"
-                  class="textInput"
-                  placeholder="City"
-                  pattern="^[a-zA-Z]"
-                  title="Enter upper or lower case letters"
-                />
-              </label>
-            </div>
-        </div>
-        <div class="form-container">    
-
+        <div class="form-container checkout">    
+<form action="/checkoutComplete/index.html" method="GET">
           <div class="vcard"><img
            src="../images/vcard.png"
            alt="picture of a fake visacard"
