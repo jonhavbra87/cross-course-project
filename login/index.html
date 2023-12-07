@@ -44,7 +44,9 @@
         <a href="/index.html"
           ><img src="/images/Logo.png" alt="logo of gamehub"
         /></a>
-        <div class="icons mobile"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div class="icons mobile">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
 
         <a href="/login/index.html" class="icons mobile"
           ><i class="fa-solid fa-user"></i
@@ -86,43 +88,40 @@
     <main>
       <h1>login</h1>
       <div class="wrapper">
-      <div class="login-container">
-        <form  
-        method="GET" 
-        action="/checkoutComplete/index.html"
-        id="theform">
-          <div>
-            <label for="user"
-              >Username
-              <input
-                type="text"
-                name="text"
-                id="text"
-                class="textInput"
-                placeholder="Game_Hub_Client"
-                required
-            /></label>
-          </div>
-          <div >
-            <label for="password"
-              >Password
-              <input
-                required
-                type="text"
-                name="password"
-                id="password"
-                class="textInput"
-                placeholder="************"
-                minlength="1"
-                maxlength="50"
-                pattern="^[a-zA-Z]{1,50}$"
-                title="Password must be 12 characters and include big, small, number and/or symbol."
-              />
-            </label>
-          </div>
+        <div class="login-container">
+          <form method="GET" action="/checkoutComplete/index.html" id="theform">
+            <div>
+              <label for="user"
+                >Username
+                <input
+                  type="text"
+                  name="text"
+                  id="user"
+                  class="textInput"
+                  placeholder="Game_Hub_Client"
+                  required
+              /></label>
+            </div>
+            <div>
+              <label for="password"
+                >Password
+                <input
+                  required
+                  type="text"
+                  name="password"
+                  id="password"
+                  class="textInput"
+                  placeholder="************"
+                  minlength="1"
+                  maxlength="50"
+                  pattern="^[a-zA-Z]{1,50}$"
+                  title="Password must be 12 characters and include big, small, number and/or symbol."
+                />
+              </label>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-      </form>
     </main>
     <footer>
       <div class="footer-container">
