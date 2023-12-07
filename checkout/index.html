@@ -37,7 +37,9 @@
         <a href="/index.html"
           ><img src="/images/Logo.png" alt="logo of gamehub"
         /></a>
-        <div class="icons mobile"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div class="icons mobile">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
 
         <a href="/login/index.html" class="icons mobile"
           ><i class="fa-solid fa-user"></i
@@ -79,52 +81,58 @@
     <main>
       <h1>checkout</h1>
       <div class="wrapper">
-        <div class="buygame"><p>Please put a item in your cart <i class="fa-solid fa-cart-arrow-down"></i></p>
+        <div class="buygame">
+          <p>
+            Please put a item in your cart
+            <i class="fa-solid fa-cart-arrow-down"></i>
+          </p>
           <div class="loader"></div>
         </div>
-        <div class="form-container checkout">    
-<form action="/checkoutComplete/index.html" method="GET">
-          <div class="vcard"><img
-           src="../images/vcard.png"
-           alt="picture of a fake visacard"
-         /></div>
-         <div>
-         <label for="cardnumber">Card Number
-         <input
-           type="text"
-           placeholder="xxxx xxxx xxxx xxxx"
-           name="cardnumber"
-           id="cardnumber"
-           class="textInput"
-           pattern="[0-9]{20}"
-           title="Enter your credicard number (20 digits)"
-           required
-         /></label>
-         </div>
-        <div><label for="expirationDate">MM / YY
-         <input
-           type="month"
-           placeholder="MM/YY"
-           name="expirationDate"
-           id="expirationDate"
-           class="textInput"
-           min="11-2023"
-           required
-         /></label>
-       </div>
-         <div><label for="cvc">CVC
-         <input
-           type="number"
-           placeholder="CVC"
-           name="cvc"
-           id="cvc"
-           class="textInput"
-           pattern="^\d{3}"
-           required
-         /></label>
-       </div>
-       <input type="submit" class="input-button" value="Submit" />
-       </form>
+        <div class="form-container checkout">
+          <form action="/checkoutComplete/index.html" method="GET">
+            <div class="vcard">
+              <img src="../images/vcard.png" alt="picture of a fake visacard" />
+            </div>
+            <div>
+              <label for="cardnumber"
+                >Card Number
+                <input
+                  type="text"
+                  placeholder="xxxx xxxx xxxx xxxx"
+                  name="cardnumber"
+                  id="cardnumber"
+                  class="textInput"
+                  pattern="[0-9]{20}"
+                  title="Enter your credicard number (20 digits)"
+                  required
+              /></label>
+            </div>
+            <div>
+              <label for="expirationDate"
+                >MM / YY
+                <input
+                  type="month"
+                  name="expirationDate"
+                  id="expirationDate"
+                  class="textInput"
+                  required
+              /></label>
+            </div>
+            <div>
+              <label for="cvc"
+                >CVC
+                <input
+                  type="number"
+                  placeholder="CVC"
+                  name="cvc"
+                  id="cvc"
+                  class="textInput"
+                  required
+              /></label>
+            </div>
+            <input type="submit" class="input-button" value="Submit" />
+          </form>
+        </div>
       </div>
     </main>
   </body>
