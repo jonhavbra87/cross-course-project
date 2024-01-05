@@ -6,6 +6,7 @@ export async function getGames() {
     if (!response.ok) {
         throw new Error("Unable to access list of movies.")
     }
+    console.log(games);
     return games;
 };
 

@@ -12,13 +12,13 @@ export async function renderNews(){
         let newGames = [];
 
     for (let i = 0; i < games.length; i++) {
-        if (games[i].released >= 2007) {
+        if (games[i].attributes[1].terms[0].name >= 2007) {
           newGames.push(games[i]);
           }
       }
 
-      newGames.pop();
-      newGames.pop();
+     
+
       renderGames2(newGames);
      
       return newGames;

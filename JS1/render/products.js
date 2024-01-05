@@ -7,25 +7,56 @@ export function renderGames(gameData) {
 
     gameElement.dataset.id = gameData.id;
 
-    const ImgElement = document.createElement("img");
-    ImgElement.classList.add("cover");
-    ImgElement.src = `${gameData.image}`;
-    ImgElement.setAttribute("alt", `cover image of ${gameData.title}`);
-   
+    const containerElement = document.createElement("div");
+
+
+    const imgElement = document.createElement("img");
+    imgElement.classList.add("cover");
+    imgElement.src = `${gameData.images[0].src}`;
+    imgElement.setAttribute("alt", `cover image of ${gameData.images[0].alt}`);
+
+
+    let percentElement;
+    if (gameData.on_sale === true) {
+        const percentOff = Math.round(100 - (gameData.prices.sale_price / gameData.prices.regular_price) * 100);
+
+        percentElement = document.createElement("p");
+        percentElement.innerHTML = `<span class="onsale">${percentOff}<i class="fa-solid fa-percent"></i></span>`;
+
+        containerElement.classList.add("cover-container");
+        containerElement.appendChild(imgElement);
+        containerElement.appendChild(percentElement);
+    }else {
+        percentElement = document.createElement("p");
+        percentElement.innerHTML = `Original: <i class="fa-solid fa-dollar-sign"></i> ${gameData.prices.regular_price}`;
+        containerElement.appendChild(imgElement);
+        }
+
     const title = document.createElement("h3");
-    title.textContent = gameData.title;
+    title.textContent = gameData.name;
+    title.style.marginTop = "15px";
 
     let priceElement;
-    if (gameData.onSale === true) {
-    priceElement = document.createElement("p");
-    priceElement.innerHTML = `On sale: <i class="fa-solid fa-sack-dollar"></i> ${gameData.discountedPrice}`;
+    if (gameData.on_sale === true) {
 
-    } else {
+    const salePrice = parseFloat(gameData.prices.sale_price) / 100;
+
     priceElement = document.createElement("p");
-    priceElement.innerHTML = `Original: <i class="fa-solid fa-sack-dollar"></i> ${gameData.price}`;
+    priceElement.innerHTML = `<i class="fa-solid fa-dollar-sign"></i> ${salePrice.toFixed(2)}`;
+    } else {
+    const regularPrice = parseFloat(gameData.prices.regular_price) / 100;
+
+    priceElement = document.createElement("p");
+    priceElement.innerHTML = `Original: <i class="fa-solid fa-dollar-sign"></i> ${regularPrice.toFixed(2)}`;
     }
 
-    gameElement.append(ImgElement, title, priceElement);
+    const buttonElement = document.createElement("a");
+    buttonElement.classList.add("buy-button");
+    buttonElement.innerHTML = `BUY NOW`;
+    buttonElement.href = "/checkout/?id=" + gameData.id;
+
+
+    gameElement.append(containerElement, title, priceElement, buttonElement);
 
     mainElement.append(gameElement);
 }

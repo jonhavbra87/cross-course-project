@@ -1,0 +1,26 @@
+const baseUrl = "https://kongsvinger-it.no/wp-json/wc/store/products/";
+
+const productsContainer = document.querySelector(".wpcontainer")
+
+async function getProducts(url){
+
+const response = await fetch(url);
+
+const products = await response.json();
+
+console.log(products);
+
+products.forEach(function(products){
+
+productsContainer.innerHTML += `
+
+<div class="product"><h2>${products.name}</h2>
+
+`
+});
+
+}
+
+getProducts(baseUrl);
+
+console.log("bæsj");

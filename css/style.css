@@ -125,7 +125,7 @@ main {
 }
 
 main img {
-  max-width: 100%;
+  max-width: 90%;
   max-height: auto;
   margin: 0 auto;
   padding: var(--padding);
@@ -140,6 +140,7 @@ main img {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  grid-auto-flow: row;
   justify-content: space-between;
   align-items: start;
   text-align: center;
@@ -176,7 +177,11 @@ main img {
 }
 
 .details p {
+  word-wrap: normal;
+  hyphens: auto;
   max-width: 20rem;
+  font-size: 1.2em;
+  width: auto;
   margin: 0 auto;
   border-right: solid;
   border-left: solid;
@@ -213,6 +218,32 @@ main img {
   background-color: var(--complementaryBackgroundColor);
   color: var(--primary);
 } */
+
+/* onsale */
+.cover-container {
+  position: relative;
+  max-width: 20rem;
+  margin: auto;
+}
+
+.onsale {
+  position: absolute;
+  bottom: 35px;
+  color: var(--light);
+  font-weight: 400;
+  font-size: 1em;
+  right: 30px;
+  left: auto;
+  background: var(--productsbutton);
+  padding: 3px 8px;
+  border: solid;
+  border-color: var(--primary);
+  border-radius: 7px;
+  margin: 0px;
+  min-height: 20px;
+  line-height: 2;
+  z-index: 10;
+}
 
 /* Footer design */
 footer {
@@ -293,6 +324,8 @@ h2 {
 }
 /* Game info */
 h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: 800;
   text-transform: uppercase;
   text-align: center;
@@ -463,9 +496,9 @@ thead {
   color: var(--light);
 }
 
-.checkout p {
-  /* text-align: center; */
-}
+/* .checkout p {
+  text-align: center;
+} */
 
 /* Loader */
 .loader {
@@ -498,26 +531,31 @@ thead {
 /* Game designs */
 
 /* Button */
-
+.buy-button,
 .input-button {
   display: block;
   border-radius: 10px;
-  border: solid currentColor;
+  border: solid;
   border-color: var(--primary);
   padding: 0.5rem 2rem;
   margin: 1rem auto;
-  color: var(--primary);
-  background-color: var(--button);
+  color: var(--light);
+  background-color: var(--productsbutton) !important;
   justify-content: center;
   align-items: center;
   text-align: center;
   max-width: 300px;
   cursor: pointer;
-
+  z-index: 3;
   &:hover {
     transform: scale(1.05);
     will-change: transform;
   }
+}
+
+.buy-button {
+  max-width: 100px;
+  padding: 0.5rem;
 }
 
 .productsbutton {
@@ -690,5 +728,8 @@ thead {
 
   h2 {
     font-size: 1.2em;
+  }
+  .details p {
+    font-size: 1em;
   }
 }

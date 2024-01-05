@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Game Hub is a online store for Video Games, where you can buy and download games for your device"
+    />
+
+    <meta
+      name="keywords"
+      content="console games, playstation, xbox, nintendo, PC"
+    />
+
+    <title>GameHub | WP Products</title>
+
+    <script src="/JS1/api/getWpProducts.js" type="module"></script>
+
+    <script
+      src="https://kit.fontawesome.com/fe3b43ee88.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link href="/css/style.css" rel="stylesheet" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="/index.html"
+          ><img src="/images/Logo.png" alt="logo of gamehub"
+        /></a>
+
+        <div class="icons mobile">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <a href="/login/index.html" class="icons mobile"
+          ><i class="fa-solid fa-user"></i
+        ></a>
+
+        <a href="/checkout/index.html" class="icons mobile"
+          ><i class="fa-solid fa-cart-shopping"></i
+        ></a>
+
+        <div class="icons mobile"><i class="fa-solid fa-toggle-off"></i></div>
+
+        <input type="checkbox" id="menu-checkbox" />
+
+        <label for="menu-checkbox" class="hamburger-icon"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
+
+        <nav>
+          <a href="/index.html" class="current">Home</a>
+
+          <a href="/products/">Products</a>
+
+          <a href="/about/">About</a>
+
+          <a href="/contact/">Contact</a>
+        </nav>
+
+        <label class="hidden-text" for="site-search">Search the site</label>
+
+        <input
+          type="search"
+          id="site-search"
+          name="q"
+          class="search"
+          placeholder="Search"
+        />
+
+        <div class="icons desktop">
+          <a href="/login/index.html"><i class="fa-solid fa-user"></i></a>
+
+          <a href="/checkout/index.html"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></a>
+
+          <div class="dark-theme-select">
+            <i class="fa-solid fa-toggle-off"></i
+            ><span class="dark-theme-text">Dark theme</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <h1>products</h1>
+      <div class="wpcontainer"></div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-content"><p>&copy; gamehub corporation</p></div>
+
+        <div class="footer-content"><p>terms of use</p></div>
+
+        <div class="footer-content"><p>legal & other</p></div>
+
+        <div class="footer-content"><p>shipping & delivery</p></div>
+
+        <div class="brands">
+          <a href="https://www.snapchat.com/"
+            ><i class="fa-brands fa-square-snapchat"></i
+          ></a>
+
+          <a href="https://www.instagram.com/"
+            ><i class="fa-brands fa-square-instagram"></i
+          ></a>
+
+          <a href="https://www.facebook.com/"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+
+          <a href="https://www.reddit.com/"
+            ><i class="fa-brands fa-square-reddit"></i
+          ></a>
+
+          <a href="https://www.youtube.com/"
+            ><i class="fa-brands fa-square-youtube"></i
+          ></a>
+
+          <a href="https://www.twitter.com/"
+            ><i class="fa-brands fa-square-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

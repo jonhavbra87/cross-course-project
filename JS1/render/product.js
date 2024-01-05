@@ -1,7 +1,7 @@
 
 export function renderDetailedGame(gameData) {
     const mainElement = document.querySelector(".details");
-
+    
     const gameElement = document.createElement("a");
     gameElement.href = "/product/?id=" + gameData.id;
 
@@ -9,43 +9,69 @@ export function renderDetailedGame(gameData) {
 
     const headline = document.createElement("h1");
     headline.classList.add("product");
-    headline.textContent = gameData.title;
+    headline.textContent = gameData.name;
 
-    const ImgElement = document.createElement("img");
-    ImgElement.classList.add("cover");
-    ImgElement.src = `${gameData.image}`;
-    ImgElement.setAttribute("alt", `cover image of ${gameData.title}`);
+    const containerElement = document.createElement("div");
 
-    const title = document.createElement("h3");
-    title.textContent = gameData.title;
+
+    const imgElement = document.createElement("img");
+    imgElement.classList.add("cover");
+    imgElement.src = `${gameData.images[0].src}`;
+    imgElement.setAttribute("alt", `cover image of ${gameData.images[0].alt}`);
+
+
+    let percentElement;
+    if (gameData.on_sale === true) {
+        const percentOff = Math.round(100 - (gameData.prices.sale_price / gameData.prices.regular_price) * 100);
+
+        percentElement = document.createElement("p");
+        percentElement.innerHTML = `<span class="onsale">${percentOff}<i class="fa-solid fa-percent"></i></span>`;
+
+        containerElement.classList.add("cover-container");
+        containerElement.appendChild(imgElement);
+        containerElement.appendChild(percentElement);
+    }else {
+        percentElement = document.createElement("p");
+        percentElement.innerHTML = `Original: <i class="fa-solid fa-dollar-sign"></i> ${gameData.prices.regular_price}`;
+        containerElement.appendChild(imgElement);
+        }
+
     
-    // Define either the priceElement is onSale or not. Checks if onSale is true or false.
+    
+    // Define either the priceElement is onSale or not. Checks if on_sale is true or false.
     let priceElement;
-    if (gameData.onSale === true) {
+    if (gameData.on_sale === true) {
+
+    const salePrice = parseFloat(gameData.prices.sale_price) / 100;
+
     priceElement = document.createElement("p");
-    priceElement.innerHTML = `On sale: <i class="fa-solid fa-sack-dollar"></i> ${gameData.discountedPrice}`;
+    priceElement.innerHTML = `<i class="fa-solid fa-dollar-sign"></i> ${salePrice.toFixed(2)}`;
     } else {
+    const regularPrice = parseFloat(gameData.prices.regular_price) / 100;
+
     priceElement = document.createElement("p");
-    priceElement.innerHTML = `Original: <i class="fa-solid fa-sack-dollar"></i> ${gameData.price}`;
+    priceElement.innerHTML = `Original: <i class="fa-solid fa-dollar-sign"></i> ${regularPrice.toFixed(2)}`;
     }
 
     const descriptionElement = document.createElement("p");
-    descriptionElement.innerHTML = `<i class="fa-solid fa-comment-dots"></i> ${gameData.description}`;
+    descriptionElement.classList.add("details");
+    descriptionElement.innerHTML = `<i class="fa-solid fa-comment-dots"></i>${gameData.description}`;
 
     const releasedElement = document.createElement("p");
-    releasedElement.innerHTML = `<i class="fa-regular fa-calendar"></i> ${gameData.released}`;
+    releasedElement.innerHTML = `<i class="fa-regular fa-calendar"></i> ${gameData.attributes[1].terms[0].name}`;
 
     const genreElement = document.createElement("p");
-    genreElement.innerHTML = `<i class="fa-regular fa-user"></i> ${gameData.genre}`;
+    genreElement.innerHTML = `<i class="fa-solid fa-gamepad"></i> ${gameData.categories[0].name}`;
 
     const ageRatingElement = document.createElement("p");
-    ageRatingElement.innerHTML = ` <i class="fa-solid fa-circle-info"></i>PEGI: ${gameData.ageRating}`;
+    ageRatingElement.innerHTML = ` <i class="fa-solid fa-circle-info"></i>PEGI: ${gameData.attributes[0].terms[0].name}`;
 
     const buttonElement = document.createElement("a");
-    buttonElement.innerHTML = `<a class="input-button">BUY NOW</a>`;
+    buttonElement.classList.add("buy-button");
+    buttonElement.innerHTML = `BUY NOW`;
     buttonElement.href = "/checkout/?id=" + gameData.id;
 
-    gameElement.append(headline, ImgElement, title, priceElement, descriptionElement, releasedElement, genreElement, ageRatingElement, buttonElement);
+    gameElement.append(headline, containerElement, priceElement, descriptionElement, releasedElement, genreElement, ageRatingElement, buttonElement);
 
     mainElement.append(gameElement);
 
@@ -56,4 +82,5 @@ export function renderDetailsOfGame(listOfGames) {
     const mainElement = document.querySelector(".details");
     mainElement.innerHTML = "";
 renderDetailedGame(listOfGames);
+console.log(listOfGames);
 }
