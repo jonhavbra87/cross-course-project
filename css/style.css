@@ -125,7 +125,7 @@ main {
 }
 
 main img {
-  max-width: 90%;
+  max-width: 100%;
   max-height: auto;
   margin: 0 auto;
   padding: var(--padding);
