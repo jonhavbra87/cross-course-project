@@ -5,7 +5,28 @@
 ## Description
 
 The goal of this project was to use WordPress as an content management to setup an API for consumption for my cross-course project. My cross-course project is a project of learning HTML, CSS and Vanilla JavaScript.
+### Slogan
+The universe of games
 
+### Target audience
+#### Gamers
+Aged 18 to 25 who are interested in computer games, and would either like to purchase games or would like to sell games they have finished playing.
+
+### Unique selling points
+For a user buying games: It is an online game store that provides digital games to gamers at a competitive price.
+
+GameHub allows you to purchase a wide selection of games, at a competitive price. 
+
+### Site architecture
+
+- Home
+- List of games
+- A games page showing the product details
+_(product details such as the description of the product, price and add to cart button)_
+- Checkout page
+- Checkout success
+- About
+- Contact
 
 ## Built With
 <p align="left">
