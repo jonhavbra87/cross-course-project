@@ -39,6 +39,7 @@ _(product details such as the description of the product, price and add to cart 
 
 
 ## Getting Started
+Visit the website [here](https://gamehub.kongsvinger-it.no/)
 
 ### Installing
 
@@ -47,8 +48,7 @@ _(product details such as the description of the product, price and add to cart 
 ```bash
 git clone [https://github-repo](https://github.com/jonhavbra87/gamehub/blob/wpAPI)
 ```
-Visit website
-[here](https://gamehub.kongsvinger-it.no/)
+
 
 2. Install the dependencies:
 
@@ -74,10 +74,3 @@ If you want to contribute, I would appreciate it if you open a pull request, so 
         <a href="https://www.discord.com"><img width="50px" src="https://camo.githubusercontent.com/f66a24788a2818b82624c61c17c513d16ea14ac6c579dd1c2b3ffe5df8c6cc22/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f646973636f72642e737667" />
      <a href="https://www.facebook.com"><<img width="50px" src="https://camo.githubusercontent.com/05bf51513179d5b864921ba868f4bf54d2d74054f8f293f4569d969409b60a69/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f66616365626f6f6b2e737667" />
          <a href="https://www.instagram.com/jonareb87?igsh=MTAwdDEzZHFwMWFjbQ%3D%3D&utm_source=qr"><img width="50px" src="https://camo.githubusercontent.com/d94fd60f67ea9647bb508da87ad32b1eacd2bfb6745fac2be9869f9483bd0dca/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f696e7374616772616d2e737667" />
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
-
-## Acknowledgments
-
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
