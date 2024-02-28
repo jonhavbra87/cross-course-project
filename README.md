@@ -24,8 +24,7 @@ https://developer.mozilla.org/en-US/docs/Glossary/HTML5
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"> <img width="50px" src="https://camo.githubusercontent.com/10e5da35078001d86532bb75efeecf75aaca2765af099b3a2592a22fd12cb2e0/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f637373332e737667" />
 <a href="http://vanilla-js.com/ target="_blank"> <img width="50px" src="https://camo.githubusercontent.com/8e946c2804fdccdb848c1109042c5398ea6bf93367d82f83aad430b722f50d9b/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6a6176617363726970742e737667" />
 <a href="https://developer.wordpress.org/rest-api/" target="_blank"> <img width="50px" src="https://camo.githubusercontent.com/d5de95dd0d27e74bfe80901cdea3688b2d4c82357c2a6466f6dd03c8fb2e7b56/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f776f726470726573732e737667" />
-<a href="https://www.phpmyadmin.net/" target="_blank"> <img width="50px" src="
-https://camo.githubusercontent.com/26fd5f4d543ff70a6ea4e085139edb717bfab7979960e0fafc9bd92cd1c7727f/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f7068702e737667" />
+<a href="https://www.phpmyadmin.net/" target="_blank"> <img width="50px" src="https://camo.githubusercontent.com/26fd5f4d543ff70a6ea4e085139edb717bfab7979960e0fafc9bd92cd1c7727f/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f7068702e737667" />
 
 
 ## Getting Started
