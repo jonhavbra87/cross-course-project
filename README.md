@@ -49,7 +49,7 @@ This is where you list how to get the project started. It typically just include
 git clone https://github-repo
 ```
 Visit website
-[here](https://portfolio.kongsvinger-it.no/)
+[here](https://gamehub.kongsvinger-it.no/)
 
 2. Install the dependencies:
 
