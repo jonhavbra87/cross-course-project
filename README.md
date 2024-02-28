@@ -1,28 +1,18 @@
 # Cross-course project
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)](https://raw.githubusercontent.com/NoroffFEU/first-year-cross-course-assignment-brief-three/master/GameHub_Logo.png)
 
-A simple overview of the use/purpose of the project.
 
 ## Description
 
-# gamehubjs1
+The goal of this project was to use WordPress as an content management to setup an API for consumption for my cross-course project. My cross-course project is a project of learning HTML, CSS and Vanilla JavaScript.
 
-This is an updated version of an older CA delivery of Noroff FrontEnd Online Study! I have started from scratch, and added all the styling and content from my old CA delivery.
 
-I learned how to use innerHTML and add the content to an url. Then i learned how to use the .append (method) later on. I stucked with the ".append - method" because of it seems like the more modern way and it seamed a bit faster.
-
-You can add some bullet points if you'd like to:
-
-- List item 1
-- List item 2
-- List item 3
-https://developer.mozilla.org/en-US/docs/Glossary/HTML5
 ## Built With
 <p align="left">
 <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank"> <img width="50px" src="https://camo.githubusercontent.com/93e4e94382fb2211baf595fd981ec363e1400d1ad208321396344b2eb998b51f/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f68746d6c352e737667" />
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"> <img width="50px" src="https://camo.githubusercontent.com/10e5da35078001d86532bb75efeecf75aaca2765af099b3a2592a22fd12cb2e0/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f637373332e737667" />
-<a href="http://vanilla-js.com/ target="_blank"> <img width="50px" src="https://camo.githubusercontent.com/8e946c2804fdccdb848c1109042c5398ea6bf93367d82f83aad430b722f50d9b/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6a6176617363726970742e737667" />
+<a href="https://www.javatpoint.com/what-is-vanilla-javascript" target="_blank"> <img width="50px" src="https://camo.githubusercontent.com/8e946c2804fdccdb848c1109042c5398ea6bf93367d82f83aad430b722f50d9b/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6a6176617363726970742e737667" />
 <a href="https://developer.wordpress.org/rest-api/" target="_blank"> <img width="50px" src="https://camo.githubusercontent.com/d5de95dd0d27e74bfe80901cdea3688b2d4c82357c2a6466f6dd03c8fb2e7b56/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f776f726470726573732e737667" />
 <a href="https://www.phpmyadmin.net/" target="_blank"> <img width="50px" src="https://camo.githubusercontent.com/26fd5f4d543ff70a6ea4e085139edb717bfab7979960e0fafc9bd92cd1c7727f/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f7068702e737667" />
 
