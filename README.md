@@ -1,7 +1,6 @@
 # Cross-course project
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)](https://raw.githubusercontent.com/NoroffFEU/first-year-cross-course-assignment-brief-three/master/GameHub_Logo.png)
-
+![image](https://raw.githubusercontent.com/NoroffFEU/first-year-cross-course-assignment-brief-three/master/GameHub_Logo.png)]
 
 ## Description
 
