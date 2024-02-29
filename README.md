@@ -46,7 +46,7 @@ Visit the website [here](https://gamehub.kongsvinger-it.no/)
 Clone the repo:
 
 ```bash
-git clone https://github.com/jonhavbra87/gamehub/blob/wpAPI
+git clone [https://github.com/jonhavbra87/gamehub/blob/wpAPI](https://github.com/jonhavbra87/cross-course-project.git)
 ```
 
 
