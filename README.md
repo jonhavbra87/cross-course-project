@@ -23,7 +23,7 @@ GameHub allows you to purchase a wide selection of games, at a competitive price
 - Home
 - List of games
 - A games page showing the product details
-_(product details such as the description of the product, price and add to cart button)_
+- Product details page; such as the description of the product, price and add to cart button
 - Checkout page
 - Checkout success
 - About
@@ -43,10 +43,10 @@ Visit the website [here](https://gamehub.kongsvinger-it.no/)
 
 ### Installing
 
-1. Clone the repo:
+Clone the repo:
 
 ```bash
-git clone [https://github-repo](https://github.com/jonhavbra87/gamehub/blob/wpAPI)
+git clone https://github.com/jonhavbra87/gamehub/blob/wpAPI
 ```
 
 
@@ -57,12 +57,7 @@ npm install
 ```
 
 ### Running
-
-To run the app, run the following commands:
-
-```bash
-npm run start
-```
+Clone the repo, open in VSCode. Right click on the index.html and open in Live Server.
 
 ## Contributing
 
