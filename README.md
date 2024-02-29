@@ -46,14 +46,7 @@ Visit the website [here](https://gamehub.kongsvinger-it.no/)
 Clone the repo:
 
 ```bash
-git clone [https://github.com/jonhavbra87/gamehub/blob/wpAPI](https://github.com/jonhavbra87/cross-course-project.git)
-```
-
-
-2. Install the dependencies:
-
-```
-npm install
+git clone https://github.com/jonhavbra87/gamehub/blob/wpAPI
 ```
 
 ### Running
